@@ -1,0 +1,35 @@
+{
+  "name": "scottkutler-component-library",
+  "version": "1.1.0",
+  "description": "This is my component library. It features:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [],
+  "author": "Scott Kutler",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.9.11",
+    "@material-ui/icons": "^4.9.1",
+    "material-ui": "^0.20.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "babel-loader": "^8.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skut21x-ga/component-library-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skut21x-ga/component-library-project/issues"
+  },
+  "homepage": "https://github.com/skut21x-ga/component-library-project#readme"
+}
