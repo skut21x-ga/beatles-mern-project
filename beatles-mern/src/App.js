@@ -50,7 +50,7 @@ function App() {
     lyrics: "songLyrics",
   };
 
-  const dummy = () => console.log("hello")
+  const dummy = () => console.log("hello");
 
   return (
     <div className="App">
@@ -65,6 +65,55 @@ function App() {
           <SongInfo data={song} onSubmit={dummy} onDelete={dummy} />
         </div>
       </Modal>
+
+      <div>
+        <NavBar isLoggedIn={this.state.isLoggedIn} />
+        <div className="body">
+          <Switch>
+            <Route
+              path="/signup"
+              render={(props) => {
+                return (
+                  <SignUpForm
+                    isLoggedIn={this.state.isLoggedIn}
+                    handleInput={this.handleInput}
+                    handleSignUp={this.handleSignUp}
+                  />
+                );
+              }}
+            />
+            <Route
+              path="/logout"
+              render={(props) => {
+                return (
+                  <LogOut
+                    isLoggedIn={this.state.isLoggedIn}
+                    handleLogOut={this.handleLogOut}
+                  />
+                );
+              }}
+            />
+            <Route
+              path="/login"
+              render={(props) => {
+                return (
+                  <LogInForm
+                    isLoggedIn={this.state.isLoggedIn}
+                    handleInput={this.handleInput}
+                    handleLogIn={this.handleLogIn}
+                  />
+                );
+              }}
+            />
+            <Route
+              path="/"
+              render={() => {
+                return <DogList isLoggedIn={this.state.isLoggedIn} />;
+              }}
+            />
+          </Switch>
+        </div>
+      </div>
     </div>
   );
 }
