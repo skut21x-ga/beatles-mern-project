@@ -22,8 +22,8 @@ export default function Navbar() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+  const handleChange = (event /*  newValue */) => {
+    /* setValue(newValue),  */ console.log(event.target);
   };
 
   return (
@@ -31,29 +31,27 @@ export default function Navbar() {
       <Paper>
         <Tabs
           value={value}
-          onChange={handleChange}
+          onClick={handleChange}
           variant="fullWidth"
-          indicatorColor="red"
-          textColor="black"
+          indicatorColor="inherit"
+          textColor="inherit"
         >
           <div className="tabContainerBox">
             <div className="tabBox">
-              <Tab label="The Beatles" />
+              <Tab className="TabLabel" label="The Beatles" />
             </div>
             <div className="tabBox">
-              <Tab label="John Lennon" />
+              <Tab className="TabLabel" label="John Lennon" />
             </div>
-
             <div className="tabBox">
-              <Tab label="Paul McCartney" />
-            </div>
-
-            <div className="tabBox">
-              <Tab label="George Harrison" />
+              <Tab className="TabLabel" label="Paul McCartney" />
             </div>
 
             <div className="tabBox">
-              <Tab label="Ringo Starr" />
+              <Tab className="TabLabel" label="George Harrison" />
+            </div>
+            <div className="tabBox">
+              <Tab className="TabLabel" label="Ringo Starr" />
             </div>
           </div>
         </Tabs>
