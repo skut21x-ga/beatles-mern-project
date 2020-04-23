@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 //import NewSong from "./NewSong";
 import Navbar from "./Navbar";
+import JohnLennon from "./JohnLennon/JohnLennon";
 import PaulMcCartney from "./PaulMcCartney/PaulMcCartney";
 import GeorgeHarrison from "./GeorgeHarrison/GeorgeHarrison";
 import RingoStarr from "./RingoStarr/RingoStarr";
