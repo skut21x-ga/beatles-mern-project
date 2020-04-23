@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import "./Alphabet.css";
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
-  rel="stylesheet"
-></link>;
-
 //alphabet code from http://www.matthiassommer.it/programming/frontend/alphabetical-list-navigation-with-javascript-html-and-css/
 
 class NavBar extends Component {
