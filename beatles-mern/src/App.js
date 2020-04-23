@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import "./App.css";
 import SongInfo from "./SongInfo";
+import NewSong from "./NewSong";
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
