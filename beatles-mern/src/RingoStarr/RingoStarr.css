@@ -1,0 +1,13 @@
+input{
+    padding: 50px 100px;
+    margin: 20px;
+    font-size: larger;
+    border: solid black thin;
+}
+
+button{
+    padding: 30px 60px;
+    font-size: larger;
+    border: solid black thin;
+    border-radius: 5px;
+}
