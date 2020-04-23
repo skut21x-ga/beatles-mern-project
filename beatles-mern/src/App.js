@@ -2,12 +2,9 @@ import Modal from "@material-ui/core/Modal";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import "./App.css";
-import SongInfo from "./SongInfo";
-<<<<<<< HEAD
-import NewSong from "./NewSong";
-=======
+import SongInfo from "./SongInfo.js";
+// import NewSong from "./NewSong";
 import Navbar from "./Navbar"
->>>>>>> origin
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
