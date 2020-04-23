@@ -9,6 +9,7 @@ import NewSong from "./NewSong";
 import Navbar from "./Navbar"
 >>>>>>> origin
 
+
 function rand() {
   return Math.round(Math.random() * 20) - 10;
 }
