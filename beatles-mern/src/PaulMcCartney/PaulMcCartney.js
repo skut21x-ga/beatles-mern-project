@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./PaulMcCartney.css";
 import axios from "axios";
+import { Route, Link } from "react-router-dom";
 
 class PaulMcCartney extends Component {
     constructor(props) {
@@ -28,9 +29,12 @@ class PaulMcCartney extends Component {
         return(
             <div>
                 PaulMcCartney<br></br><br></br>
-        {
-            gets.length ? gets.map(gets => <div key={gets._id}>{gets.Song}</div>): null
-          }
+            {
+            gets.length ? gets.map(gets => <div key={gets._id}>
+                <Link to={"/" + gets.Song}>
+                    {gets.Song}
+                </Link></div>): null
+            }
             </div>
           );
         };

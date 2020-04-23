@@ -4,7 +4,7 @@ import SongInfo from "./SongInfo";
 //import NewSong from "./NewSong";
 import Navbar from "./Navbar"
 import Home from "./Home/Home";
-//import JohnLennon from './JohnLennon/JohnLennon'
+import JohnLennon from './JohnLennon/JohnLennon'
 import PaulMcCartney from './PaulMcCartney/PaulMcCartney'
 import GeorgeHarrison from './GeorgeHarrison/GeorgeHarrison'
 import RingoStarr from './RingoStarr/RingoStarr'
@@ -25,10 +25,10 @@ function App() {
       exact
       component={Home}
     />
-    {/* <Route
+    <Route
       path="/JohnLennon/"
       component={JohnLennon}
-    /> */}
+    />
       <Route
       path="/PaulMcCartney"
       exact
