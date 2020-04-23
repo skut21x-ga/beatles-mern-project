@@ -4,6 +4,7 @@ import axios from "axios";
 import Modal from "@material-ui/core/Modal";
 import { makeStyles } from "@material-ui/core/styles";
 import SongInfo from "../SongInfo"
+import John from "../img/JohnLennon.jpeg"
 
 
 class JohnLennon extends Component {
@@ -40,6 +41,9 @@ componentDidMount(){
         <div>
           <div>
           John Lennon<br></br><br></br>
+
+        <img src={John} alt=""></img>
+
           {
         gets.length ? 
         gets.map(gets => 
