@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import "./App.css";
 import SongInfo from "./SongInfo";
+import Navbar from "./Navbar"
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -54,6 +55,8 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar></Navbar>
+      {/*  */}
       <button onClick={handleOpen}>Open</button>
       <Modal
         open={open}
@@ -65,6 +68,7 @@ function App() {
           <SongInfo data={song} onSubmit={dummy} onDelete={dummy} />
         </div>
       </Modal>
+
     </div>
   );
 }
