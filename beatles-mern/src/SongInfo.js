@@ -29,9 +29,9 @@ export default function SongInfo(props) {
       <div>
         <h2 id="Song Title">Text in a modal</h2>
         <p>
-          Song Name:
-         {props.value}
-         Song Lyrics: 
+          Song Name:<br></br><br></br>
+         {props.value}<br></br><br></br>
+         Song Lyrics: <br></br><br></br>
          {props.datavalue}
         </p>
       </div>
