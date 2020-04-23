@@ -1,0 +1,9 @@
+.Icon:hover {
+  filter: invert(1);
+  background-color: white;
+}
+
+.Icon {
+  filter: invert(0);
+  background-color: white;
+}
