@@ -23,7 +23,7 @@ export default function Navbar() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event /*  newValue */) => {
-    /* setValue(newValue),  */ console.log(event.target);
+    /* setValue(newValue),  */ console.log(event.target.innerText);
   };
 
   return (
