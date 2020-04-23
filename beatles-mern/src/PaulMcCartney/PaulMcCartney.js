@@ -2,68 +2,38 @@ import React, { Component } from "react";
 import "./PaulMcCartney.css";
 import axios from "axios";
 
-class Put extends Component {
+class PaulMcCartney extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            name: ""
-        }
+            gets: []
+         }
+      }
+      
+    componentDidMount(){
+      axios.get(`https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/name/Paul%20McCartney`,{headers: {'Access-Control-Allow-Origin': 'dakom1-crud-api.herokuapp.com/lists'}})
+      .then(res => {
+        console.log(res)
+        this.setState({gets: res.data})
+
+      })
+      .catch(error =>{
+        console.log(error)
+      })
     }
-
-
-    changeHandler = e =>{
-        this.setState({name: e.target.value})
-    }
-    submitHandler = e =>{
-        e.preventDefault()
-        const user ={
-            method: "post",
-            url: `https://cors-anywhere.herokuapp.com/dakom1-crud-api.herokuapp.com/lists/`,
-            headers: {'Access-Control-Allow-Origin': 'dakom1-crud-api.herokuapp.com/lists'},
-            data: {
-              name: this.state.name,
-            }
-    };
-
-    axios(user).then(
-        (res) => {
-          console.log(res.data);
-          let info= document.querySelector(".change")
-          info.innerHTML= "name: "+res.data.name;
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
-
-      // axios.post(`https://cors-anywhere.herokuapp.com/dakom1-crud-api.herokuapp.com/lists/`,
-        // {headers: {'Access-Control-Allow-Origin': 'dakom1-crud-api.herokuapp.com/lists'}},{"body":{"name":"mike"}})
-        // .then(res => {
-        //     console.log(user)
-        //     console.log(res.data)    
-        //   })
-        //   .catch(error =>{
-        //     console.log(error)
-        //   })
-    }
-    render() {
-        return (
+    
+      render() {
+        const {gets} = this.state
+        return(
             <div>
-                <p>This is the  where you can create your own Pokemon</p>
-
-                <form onSubmit={this.submitHandler}>
-                    <div>Name<input type="text" name= "name" onChange={this.changeHandler}/></div>
-
-                    <button type="submit">Post</button>
-                </form>
-
-                <p className="change"></p>
-
+                PaulMcCartney<br></br><br></br>
+        {
+            gets.length ? gets.map(gets => <div key={gets._id}>{gets.Song}</div>): null
+          }
             </div>
-            
-        )
-    }
+          );
+        };
 }
 
-export default Put
+export default PaulMcCartney
