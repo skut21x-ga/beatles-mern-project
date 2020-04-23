@@ -5,6 +5,7 @@ import "./App.css";
 import SongInfo from "./SongInfo";
 import Navbar from "./Navbar"
 
+
 function rand() {
   return Math.round(Math.random() * 20) - 10;
 }
