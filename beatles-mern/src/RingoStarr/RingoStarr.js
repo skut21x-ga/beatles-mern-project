@@ -41,7 +41,7 @@ componentDidMount(){
           <div>
           <div className="alphabetBox"><Alphabet></Alphabet></div>
 
-          Ringo Starr<br></br><br></br>
+          <br></br><br></br>
           <img src={Ringo} alt="" className="profile"></img>
 
           {
