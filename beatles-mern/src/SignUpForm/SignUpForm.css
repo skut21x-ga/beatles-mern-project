@@ -1,4 +1,14 @@
 form {
+<<<<<<< HEAD
+  margin: 0 30% 0 30%;
+}
+
+.profile {
+  height: 250px;
+  margin: 5px;
+  margin-top: -15px;
+}
+=======
     margin: 0 30% 0 30%;
     display: flex;
     justify-content: center;
@@ -34,3 +44,4 @@ input{
 .footer{
     border-top: solid black thin;
 }
+>>>>>>> master

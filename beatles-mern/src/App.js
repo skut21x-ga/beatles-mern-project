@@ -8,9 +8,13 @@ import GeorgeHarrison from "./GeorgeHarrison/GeorgeHarrison";
 import RingoStarr from "./RingoStarr/RingoStarr";
 import { Route, Link } from "react-router-dom";
 import Home from "./Home/Home";
+<<<<<<< HEAD
+import Banner from "./Banner/Banner";
+=======
 import SongForm from "./SongForm/SongForm"
 import Banner from "./Banner/Banner"
 import SignUpForm from "./SignUpForm/SignUpForm"
+>>>>>>> master
 // import AuthApp from "./AuthApp/AuthApp";
 
 
@@ -21,9 +25,13 @@ function App() {
     <div>
       <div className="App">
         {/* <AuthApp> </AuthApp> */}
-        <Banner></Banner>
-        <div className="banner"><img src=""></img></div>
-        <Navbar></Navbar> 
+        <div className="BannerBox">
+          <Banner></Banner>
+        </div>
+        <div className="banner">
+          <img src=""></img>
+        </div>
+        <Navbar></Navbar>
         <main>
           <Route path="/" exact component={Home} />
           <Route path="/JohnLennon/" component={JohnLennon} />
