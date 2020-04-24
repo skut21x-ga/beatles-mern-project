@@ -13,6 +13,7 @@ class JohnLennon extends Component {
 
     this.state = {
       gets: [],
+      filteredsongs: [],
       song: "",
       lyrics: "",
       artist: "",
@@ -40,7 +41,7 @@ class JohnLennon extends Component {
       )
       .then((res) => {
         console.log(res);
-        this.setState({ gets: res.data });
+        this.setState({ gets: res.data, filteredsongs: res.data });
       })
       .catch((error) => {
         console.log(error);
@@ -52,45 +53,37 @@ class JohnLennon extends Component {
       letter,
       "this data has been moved from alphabet to JohnLennon.js"
     );
-    this.setState({ filterLetter: letter });
-  };
-
-  filterSongs = (letter) => {
-    console.log(
-      letter,
-      "this data has been moved from alphabet to JohnLennon.js"
-    );
-    this.setState({ filterLetter: letter });
+    let filteredSongs = this.state.gets.filter((song) => {
+      return song.Song.toLowerCase().charAt(0) == letter.toLowerCase();
+    });
+    this.setState({ filterLetter: letter, filteredsongs: filteredSongs });
   };
 
   render() {
-    const { gets } = this.state;
+    const gets = this.state.filteredsongs;
 
     return (
       <div>
         <div>
           <div className="alphabetBox">
-            <Alphabet letterSelector={this.filterSongs}></Alphabet>
+            <Alphabet anything="hello test" letterSelector={this.filterSongs} />
           </div>
-
           {this.state.artist}
           <br></br>
           <br></br>
-
           <img src={John} alt="" className="profile"></img>
-
-          {gets.length
-            ? gets.map((gets) => (
-                <div
-                  key={gets._id}
-                  value={gets.Song}
-                  datavalue={gets.Lyrics}
-                  onClick={this.songClick}
-                >
-                  {gets.Song}
-                </div>
-              ))
-            : null}
+          {gets.map((gets) => {
+            return (
+              <div
+                key={gets._id}
+                value={gets.Song}
+                datavalue={gets.Lyrics}
+                onClick={this.songClick}
+              >
+                {gets.Song}
+              </div>
+            );
+          })}
         </div>
         <div className="songLyrics">
           <SongInfo value={this.state.song} datavalue={this.state.lyrics}>

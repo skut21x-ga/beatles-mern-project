@@ -3,15 +3,16 @@ import "./Alphabet.css";
 
 //alphabet code from http://www.matthiassommer.it/programming/frontend/alphabetical-list-navigation-with-javascript-html-and-css/
 
-class NavBar extends Component {
+class Alphabet extends Component {
   constructor(props) {
     super(props);
+    console.log(this.props);
     this.state = {
       artist: null,
     };
   }
   click = (e) => {
-    this.props.letterSelector(e.target.getAttribute("data-Value"))
+    this.props.letterSelector(e.target.getAttribute("data-Value"));
     this.setState(
       {
         artist: e.target.getAttribute("data-Value"),
@@ -72,4 +73,4 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default Alphabet;
