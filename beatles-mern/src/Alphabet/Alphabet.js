@@ -50,7 +50,6 @@ class Alphabet extends Component {
       "X",
       "Y",
       "Z",
-      "#",
     ];
     return (
       <div className="alphabetContainer">

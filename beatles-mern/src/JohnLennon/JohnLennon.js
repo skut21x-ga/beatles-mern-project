@@ -49,10 +49,7 @@ class JohnLennon extends Component {
   }
 
   filterSongs = (letter) => {
-    console.log(
-      letter,
-      "this data has been moved from alphabet to JohnLennon.js"
-    );
+    console.log(letter, "from JohnLennon.js");
     let filteredSongs = this.state.gets.filter((song) => {
       return song.Song.toLowerCase().charAt(0) == letter.toLowerCase();
     });
@@ -65,13 +62,13 @@ class JohnLennon extends Component {
     return (
       <div>
         <div>
-          <div className="alphabetBox">
-            <Alphabet anything="hello test" letterSelector={this.filterSongs} />
-          </div>
           {this.state.artist}
           <br></br>
           <br></br>
           <img src={John} alt="" className="profile"></img>
+          <div className="alphabetBox">
+            <Alphabet anything="hello test" letterSelector={this.filterSongs} />
+          </div>
           {gets.map((gets) => {
             return (
               <div

@@ -1,3 +1,9 @@
 span {
-    margin: auto 30px;
-  }
+  margin: auto 30px;
+}
+
+.profile {
+  height: 267px;
+  margin: 5px;
+  margin-top: -15px;
+}

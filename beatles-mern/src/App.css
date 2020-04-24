@@ -17,8 +17,14 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.alphabetBox{
+.alphabetBox {
   display: flex;
   justify-content: center;
   margin-top: 10px;
+}
+.BannerBox {
+  background-color: black;
+  padding-bottom: 20px;
+  margin-bottom: -23px;
+  padding-top: 15px;
 }
