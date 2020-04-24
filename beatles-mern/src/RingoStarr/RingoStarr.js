@@ -7,7 +7,6 @@ import SongInfo from "../SongInfo";
 import React, { Component } from "react";
 import Icon from "@material-ui/core/Icon";
 import { deleteSong } from "../ApiAccess/api";
-import Ringo from "../img/Ringo-Starr-Photo.jpg";
 import Alphabet from "../Alphabet/Alphabet";
 
 class RingoStarr extends Component {

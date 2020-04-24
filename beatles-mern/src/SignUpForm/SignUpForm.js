@@ -8,26 +8,35 @@ class SignUpForm extends Component {
   render() {
     return (
       <div className="footer">
-        <h2>Sign Up</h2>
-
-        <form>
+        <form className="signUpForm">
+          {" "}
+          <h2 className="signUpH2">Sign-Up</h2>
           <div>
-            <label htmlFor="email" className="email">Email</label>
-            <input type="text" name="email" className="emailBox" onChange={this.props.handleInput} />
+            <label htmlFor="email" className="signUpEmail">
+              Email
+            </label>
+            <input
+              type="text"
+              name="email"
+              className="signUpEmailBox"
+              onChange={this.props.handleInput}
+            />
           </div>
           <div>
-            <label htmlFor="password" className="email">Password</label>
+            <label htmlFor="password" className="signUpEmail">
+              Password
+            </label>
             <input
               type="text"
               name="password"
-              className="emailBox"
+              className="signUpEmailBox"
               onChange={this.props.handleInput}
             />
           </div>
           <input
             value="Submit"
             type="submit"
-            className="submit"
+            className="signUpSubmit"
             onClick={this.props.handleSignUp}
           />
         </form>
