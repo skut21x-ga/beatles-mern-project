@@ -53,7 +53,7 @@ class GeorgeHarrison extends Component {
   filterSongs = (letter) => {
     console.log(letter, "from Artist.js");
     let filteredSongs = this.state.gets.filter((song) => {
-      return song.Song.toLowerCase().charAt(0) == letter.toLowerCase();
+      return song.Song.toLowerCase().charAt(0) === letter.toLowerCase();
     });
     this.setState({ filterLetter: letter, filteredsongs: filteredSongs });
   };
@@ -89,9 +89,10 @@ class GeorgeHarrison extends Component {
           ))}
         </div>
         <div className="songLyrics">
-          <SongInfo value={this.state.song} datavalue={this.state.lyrics}>
-            Song!
-          </SongInfo>
+          <SongInfo
+            value={this.state.song}
+            datavalue={this.state.lyrics}
+          ></SongInfo>
         </div>
       </div>
     );

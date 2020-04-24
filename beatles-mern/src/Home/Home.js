@@ -53,7 +53,7 @@ class Home extends Component {
   filterSongs = (letter) => {
     console.log(letter, "from the artist");
     let filteredSongs = this.state.gets.filter((song) => {
-      return song.Song.toLowerCase().charAt(0) == letter.toLowerCase();
+      return song.Song.toLowerCase().charAt(0) === letter.toLowerCase();
     });
     this.setState({ filterLetter: letter, filteredsongs: filteredSongs });
   };
