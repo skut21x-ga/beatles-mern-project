@@ -31,5 +31,7 @@
 }
 
 .SubmitRoute {
-  background-color: red;
+  background-image: url("https://github.com/skut21x-ga/beatles-mern-project/blob/master/beatles-mern/src/img/Imagine.jpg?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
