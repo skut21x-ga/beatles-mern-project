@@ -8,7 +8,10 @@ import GeorgeHarrison from "./GeorgeHarrison/GeorgeHarrison";
 import RingoStarr from "./RingoStarr/RingoStarr";
 import { Route, Link } from "react-router-dom";
 import Home from "./Home/Home";
+import SongForm from "./SongForm/SongForm"
 // import AuthApp from "./AuthApp/AuthApp";
+
+
 
 
 function App() {
@@ -24,6 +27,8 @@ function App() {
           <Route path="/PaulMcCartney" exact component={PaulMcCartney} />
           <Route path="/GeorgeHarrison" exact component={GeorgeHarrison} />
           <Route path="/RingoStarr" exact component={RingoStarr} />
+          <Route path="/Create" exact component={SongForm} />
+
         </main>
       </div>
     </div>
