@@ -31,6 +31,6 @@ export default create({
   inputTextColor: "white",
   inputBorderRadius: 4,
 
-  brandTitle: "Beatle's Component Storybook",
+  brandTitle: "Beatle's Lyrics Component Storybook",
   brandUrl: "http://github.com/skut21x-ga/",
 });
