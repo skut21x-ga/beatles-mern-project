@@ -1,13 +1,3 @@
-span {
-  margin: auto 30px;
-}
-
-.profile {
-  height: 267px;
-  margin: 5px;
-  margin-top: -15px;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -22,11 +12,18 @@ body {
   margin: 5px;
   margin-top: -15px;
 }
+span {
+  margin: auto 30px;
+}
 
 .profile {
   height: 270px;
   margin: 5px;
   margin-top: -15px;
+}
+
+.songName {
+  margin-top: 15px;
 }
 
 .trashIcon {
@@ -38,6 +35,20 @@ body {
   margin-top: -2px;
 }
 
-.songName {
-  margin-top: 15px;
+.profile {
+  height: 300px;
+  margin: 5px;
+  margin-top: -15px;
+}
+
+.songLyrics-View {
+  display: flex;
+}
+
+.songLyrics-Hidden {
+  display: none;
+}
+
+.lyricsSpacing {
+  padding-bottom: 20px;
 }
