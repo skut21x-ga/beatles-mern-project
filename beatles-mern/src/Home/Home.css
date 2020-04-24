@@ -18,6 +18,15 @@ body {
   margin: 5px;
   margin-top: -15px;
 }
+span {
+  margin: auto 30px;
+}
+
+.profile {
+  height: 270px;
+  margin: 5px;
+  margin-top: -15px;
+}
 
 .songName {
   margin-top: 15px;
@@ -27,9 +36,19 @@ body {
   display: inline-block;
   justify-content: center;
   align-items: center;
-  opacity: 0.7;
+  opacity: 0.5;
   position: absolute;
   margin-top: -2px;
+}
+
+.trashIcon2 {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  position: absolute;
+  margin-top: -0px;
+  margin-left: -60px;
 }
 
 .profile {
@@ -48,4 +67,21 @@ body {
 
 .lyricsSpacing {
   padding-bottom: 20px;
+}
+
+.editSongForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: -5px;
+}
+.editSongBox {
+  margin-top: 10px;
+  font-size: 12px;
+  padding: 25px;
+  width: 350px;
+
+  text-align: center;
 }

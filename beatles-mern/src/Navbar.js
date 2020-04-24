@@ -56,7 +56,7 @@ export default function Navbar() {
               </div>
               <div className="tabBox">
                 <Link to="/Create" value={"Create"}>
-                  <Tab className="TabLabel" label="Create" />
+                  <Tab className="TabLabel" label="Create A Song" />
                 </Link>
               </div>
             </div>

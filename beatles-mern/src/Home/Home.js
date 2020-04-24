@@ -6,6 +6,7 @@ import Alphabet from "../Alphabet/Alphabet";
 import Beatles from "../img/The-Beatles-Group-Photo.jpg";
 import Icon from "@material-ui/core/Icon";
 import { deleteSong } from "../ApiAccess/api";
+import { updateSong } from "../ApiAccess/api";
 
 class Home extends Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class Home extends Component {
       artist: "",
       filterLetter: null,
       lyricsbox: "songLyrics-Hidden",
+      id: "",
     };
   }
 
@@ -26,6 +28,7 @@ class Home extends Component {
     this.setState({
       song: e.target.getAttribute("value"),
       lyrics: e.target.getAttribute("datavalue"),
+      id: e.target.getAttribute("key"),
       lyricsbox: "songLyrics-View",
     });
   };
@@ -39,6 +42,8 @@ class Home extends Component {
     axios
       .get(
         `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/`,
+        //`http://localhost:4000/`
+
         {
           headers: {
             "Access-Control-Allow-Origin":
@@ -64,6 +69,17 @@ class Home extends Component {
     this.setState({ filterLetter: letter, filteredsongs: filteredSongs });
   };
 
+  changeHandles = (e) => {
+    this.setState({ song: e.target.value });
+    console.log(this.state);
+  };
+
+  submitHandler = (e) => {
+    e.preventDefault();
+    ///const gets = this.state.filteredsongs;
+    updateSong(this.state.gets._id, this.state.song);
+  };
+
   render() {
     const gets = this.state.filteredsongs;
 
@@ -72,11 +88,10 @@ class Home extends Component {
         <div>
           <br></br>
           <br></br>
-
           <img src={Beatles} alt="" className="beatles"></img>
           <div className="alphabetBox">
             <Alphabet letterSelector={this.filterSongs} />
-          </div>
+          </div>{" "}
           {gets.map((gets) => (
             <div
               className="songName"
@@ -89,7 +104,15 @@ class Home extends Component {
               <div className="trashIcon">
                 <Icon onClick={() => deleteSong(gets._id)} color="alert">
                   delete_forever
-                </Icon>{" "}
+                </Icon>
+                <div className="trashIcon2">
+                  <Icon
+                    color="alert"
+                    onClick={() => updateSong(gets._id, this.state.song)}
+                  >
+                    edit
+                  </Icon>
+                </div>
               </div>
             </div>
           ))}
@@ -102,7 +125,19 @@ class Home extends Component {
             value={this.state.song}
             datavalue={this.state.lyrics}
           ></SongInfo>
-        </div>
+        </div>{" "}
+        <form onSubmit={this.submitHandler}>
+          <div className="editSongForm">
+            Edit Song Name:
+            <input
+              className="editSongBox"
+              type="text"
+              name="id"
+              placeholder="PLEASE SELECT A SONG ABOVE & TYPE NEW NAME HERE"
+              onChange={this.changeHandles}
+            />
+          </div>
+        </form>
       </div>
     );
   }
