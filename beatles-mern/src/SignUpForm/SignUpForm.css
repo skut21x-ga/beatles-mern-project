@@ -1,5 +1,4 @@
 form {
-<<<<<<< HEAD
   margin: 0 30% 0 30%;
 }
 
@@ -8,40 +7,33 @@ form {
   margin: 5px;
   margin-top: -15px;
 }
-=======
-    margin: 0 30% 0 30%;
-    display: flex;
-    justify-content: center;
-    height: 100px;
+
+h2 {
+  display: flex;
+  justify-content: center;
 }
 
-h2{
-    display: flex;
-    justify-content: center;
+.email {
+  margin-right: 10px;
+  height: 100px;
 }
 
-.email{
-    margin-right: 10px;
-    height: 100px;
+.emailBox {
+  margin-right: 20px;
+  height: 50px;
+}
+.submit {
+  padding: 0px;
+  margin-top: 60px;
+  font-size: 15px;
 }
 
-.emailBox{
-    margin-right: 20px;
-    height: 50px;
-}
-.submit{
-        padding: 0px;
-        margin-top: 60px;
-        font-size: 15px;
+input {
+  padding: 0px;
+  margin: 20px;
+  border: solid thin black;
 }
 
-input{
-    padding: 0px;
-    margin: 20px;
-    border: solid thin black;
+.footer {
+  border-top: solid black thin;
 }
-
-.footer{
-    border-top: solid black thin;
-}
->>>>>>> master
