@@ -42,8 +42,8 @@ class GeorgeHarrison extends Component {
   componentDidMount() {
     axios
       .get(
-        `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/name/George%20Harrison`,
-        //`http://localhost:4000/name/George%20Harrison`
+        // `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/name/George%20Harrison`,
+        `http://localhost:4000/name/George%20Harrison`,
         {
           headers: {
             "Access-Control-Allow-Origin":

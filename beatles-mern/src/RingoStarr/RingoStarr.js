@@ -42,8 +42,8 @@ class RingoStarr extends Component {
   componentDidMount() {
     axios
       .get(
-        `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/name/Ringo%20Starr`,
-        //`http://localhost:4000/name/Ringo%20Starr`
+        // `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/name/Ringo%20Starr`,
+        `http://localhost:4000/name/Ringo%20Starr`,
         {
           headers: {
             "Access-Control-Allow-Origin":
