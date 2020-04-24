@@ -6,3 +6,9 @@ body {
     width: 100vw;
     height: 100vh;
   }
+
+  .beatles {
+    height: 400px;
+    margin: 5px;
+    margin-top: -15px;
+  }

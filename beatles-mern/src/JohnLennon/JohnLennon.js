@@ -5,6 +5,7 @@ import Modal from "@material-ui/core/Modal";
 import { makeStyles } from "@material-ui/core/styles";
 import SongInfo from "../SongInfo"
 import John from "../img/JohnLennon.jpeg"
+import Alphabet from "../Alphabet/Alphabet"
 
 
 class JohnLennon extends Component {
@@ -14,7 +15,9 @@ class JohnLennon extends Component {
     this.state = {
         gets: [],
         song: "",
-        lyrics: ""
+        lyrics: "",
+        artist: "",
+        filterLetter: null
      }
   }
   
@@ -34,15 +37,22 @@ componentDidMount(){
   })
 }
 
+filterSongs=(letter)=>{
+  console.log(letter,"this data has been moved from alphabet to JohnLennon.js")
+  this.setState({filterLetter: letter})
+}
+
   render() {
     const {gets} = this.state
 
       return(
         <div>
           <div>
-          John Lennon<br></br><br></br>
+          <div className="alphabetBox"><Alphabet letterSelector={this.filterSongs}></Alphabet></div>
 
-        <img src={John} alt=""></img>
+          {this.state.artist}<br></br><br></br>
+
+        <img src={John} alt="" className="profile"></img>
 
           {
         gets.length ? 

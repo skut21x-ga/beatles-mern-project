@@ -15,7 +15,8 @@ function App() {
     <div>
       <div className="App">
         {/* <AuthApp> </AuthApp> */}
-        <Navbar></Navbar>
+        <Navbar></Navbar> 
+         
         {/*  */}
         <main>
           <Route path="/" exact component={Home} />

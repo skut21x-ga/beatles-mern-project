@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import "./RingoStarr.css";
 import axios from "axios";
 import SongInfo from "../SongInfo"
+import Ringo from "../img/Ringo-Starr-Photo.jpg"
+import Alphabet from "../Alphabet/Alphabet"
 
 
 class RingoStarr extends Component {
@@ -37,7 +39,11 @@ componentDidMount(){
       return(
         <div>
           <div>
+          <div className="alphabetBox"><Alphabet></Alphabet></div>
+
           Ringo Starr<br></br><br></br>
+          <img src={Ringo} alt="" className="profile"></img>
+
           {
         gets.length ? 
         gets.map(gets => 
