@@ -3,10 +3,11 @@ import "./PaulMcCartney.css";
 import axios from "axios";
 import { Route, Link } from "react-router-dom";
 import SongInfo from "../SongInfo"
+import Icon from "@material-ui/core/Icon";
+import {deleteSong} from "../ApiAccess/api"
+
 import Paul from "../img/Paul-McCartney-Photo.jpg"
 import Alphabet from "../Alphabet/Alphabet"
-
-
 
 class PaulMcCartney extends Component {
     constructor(props) {
@@ -52,6 +53,7 @@ class PaulMcCartney extends Component {
             gets.map(gets => 
             <div key={gets._id} value={gets.Song} datavalue={gets.Lyrics} onClick={this.songClick} >
               {gets.Song}
+              <Icon onClick={() => deleteSong(gets._id)} color="error">delete_forever</Icon>
             </div>): 
             null
           }

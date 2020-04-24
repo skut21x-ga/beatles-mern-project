@@ -1,4 +1,9 @@
+import Icon from "@material-ui/core/Icon";
+import axios from "axios";
 import React, { Component } from "react";
+import { deleteSong } from "../ApiAccess/api";
+import John from "../img/JohnLennon.jpeg";
+import SongInfo from "../SongInfo";
 import "./JohnLennon.css";
 import axios from "axios";
 import Modal from "@material-ui/core/Modal";
@@ -13,6 +18,40 @@ class JohnLennon extends Component {
 
     this.state = {
       gets: [],
+      song: "",
+      lyrics: "",
+    };
+  }
+
+  songClick = (e) => {
+    this.setState({
+      song: e.target.getAttribute("value"),
+      lyrics: e.target.getAttribute("datavalue"),
+    });
+  };
+
+  componentDidMount() {
+    axios
+      .get(
+        `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/name/John%20Lennon`,
+        {
+          headers: {
+            "Access-Control-Allow-Origin":
+              "dakom1-crud-api.herokuapp.com/lists",
+          },
+        }
+      )
+      .then((res) => {
+        console.log(res);
+        this.setState({ gets: res.data });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  render() {
+    const { gets } = this.state;
       filteredsongs: [],
       song: "",
       lyrics: "",
@@ -61,29 +100,25 @@ class JohnLennon extends Component {
 
   render() {
     const gets = this.state.filteredsongs;
-
     return (
       <div>
         <div>
-          <div className="alphabetBox">
-            <Alphabet anything="hello test" letterSelector={this.filterSongs} />
-          </div>
-          {this.state.artist}
+          John Lennon<br></br>
           <br></br>
-          <br></br>
-          <img src={John} alt="" className="profile"></img>
-          {gets.map((gets) => {
-            return (
-              <div
-                key={gets._id}
-                value={gets.Song}
-                datavalue={gets.Lyrics}
-                onClick={this.songClick}
-              >
-                {gets.Song}
-              </div>
-            );
-          })}
+          <img src={John} alt=""></img>
+          {gets.length
+            ? gets.map((gets) => (
+                <div
+                  key={gets._id}
+                  value={gets.Song}
+                  datavalue={gets.Lyrics}
+                  onClick={this.songClick}
+                >
+                  {gets.Song}{" "}
+                    <Icon onClick={() => deleteSong(gets._id)} color="error">delete_forever</Icon>
+                </div>
+              ))
+            : null}
         </div>
         <div className="songLyrics">
           <SongInfo value={this.state.song} datavalue={this.state.lyrics}>

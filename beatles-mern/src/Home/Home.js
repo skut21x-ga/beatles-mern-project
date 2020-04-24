@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import "./Home.css";
 import axios from "axios";
 import SongInfo from "../SongInfo"
+import Icon from "@material-ui/core/Icon";
+import {deleteSong} from "../ApiAccess/api"
 import Beatles from "../img/The-Beatles-Group-Photo.jpg"
 import Alphabet from "../Alphabet/Alphabet"
-
 
 class Home extends Component {
   constructor(props) {
@@ -49,6 +50,7 @@ render() {
       gets.map(gets => 
       <div key={gets._id} value={gets.Song} datavalue={gets.Lyrics} onClick={this.songClick} >
         {gets.Song}
+        <Icon onClick={() => deleteSong(gets._id)} color="error">delete_forever</Icon>
       </div>): 
       null
     }
