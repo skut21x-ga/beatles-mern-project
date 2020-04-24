@@ -44,14 +44,14 @@ class JohnLennon extends Component {
   componentDidMount() {
     axios
       .get(
-        // `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/name/John%20Lennon`,
-        `http://localhost:4000/name/John%20Lennon`
-        // {
-        //   headers: {
-        //     "Access-Control-Allow-Origin":
-        //       "dakom1-crud-api.herokuapp.com/lists",
-        //   },
-        // }
+        `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/name/John%20Lennon`,
+        //`http://localhost:4000/name/John%20Lennon`
+        {
+          headers: {
+            "Access-Control-Allow-Origin":
+              "dakom1-crud-api.herokuapp.com/lists",
+          },
+        }
       )
       .then((res) => {
         console.log(res);

@@ -41,15 +41,15 @@ class Home extends Component {
   componentDidMount() {
     axios
       .get(
-        // `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/`,
-        `http://localhost:4000/`
+        `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/`,
+        //`http://localhost:4000/`
 
-        // {
-        //   headers: {
-        //     "Access-Control-Allow-Origin":
-        //       "dakom1-crud-api.herokuapp.com/lists",
-        //   },
-        // }
+        {
+          headers: {
+            "Access-Control-Allow-Origin":
+              "dakom1-crud-api.herokuapp.com/lists",
+          },
+        }
       )
       .then((res) => {
         console.log(res);

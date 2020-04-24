@@ -44,8 +44,8 @@ class PaulMcCartney extends Component {
   componentDidMount() {
     axios
       .get(
-        // `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/name/Paul%20McCartney`,
-        `http://localhost:4000/name/Paul%20McCartney`,
+        `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/name/Paul%20McCartney`,
+        //`http://localhost:4000/name/Paul%20McCartney`
         {
           headers: {
             "Access-Control-Allow-Origin":
