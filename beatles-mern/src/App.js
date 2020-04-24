@@ -8,17 +8,10 @@ import GeorgeHarrison from "./GeorgeHarrison/GeorgeHarrison";
 import RingoStarr from "./RingoStarr/RingoStarr";
 import { Route, Link } from "react-router-dom";
 import Home from "./Home/Home";
-<<<<<<< HEAD
 import Banner from "./Banner/Banner";
-=======
-import SongForm from "./SongForm/SongForm"
-import Banner from "./Banner/Banner"
-import SignUpForm from "./SignUpForm/SignUpForm"
->>>>>>> master
+import SongForm from "./SongForm/SongForm";
+import SignUpForm from "./SignUpForm/SignUpForm";
 // import AuthApp from "./AuthApp/AuthApp";
-
-
-
 
 function App() {
   return (
@@ -39,12 +32,10 @@ function App() {
           <Route path="/GeorgeHarrison" exact component={GeorgeHarrison} />
           <Route path="/RingoStarr" exact component={RingoStarr} />
           <Route path="/Create" exact component={SongForm} />
-
         </main>
         <div className="form">
           <SignUpForm></SignUpForm>
         </div>
-        
       </div>
     </div>
   );
