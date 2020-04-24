@@ -12,10 +12,10 @@ export function deleteSong(id) {
     )
     .then((res) => {
       console.log(res);
-    })
-    .catch((error) => {
-      console.log(error);
     });
+  window.setTimeout(function () {
+    window.location.reload(false);
+  }, 500);
 }
 
 export function updateSong(id, data) {
@@ -53,8 +53,8 @@ export function createSong(data) {
     )
     .then((res) => {
       console.log(res);
-    })
-    .catch((error) => {
-      console.log(error);
     });
+  window.setTimeout(function () {
+    window.location.reload(false);
+  }, 500);
 }

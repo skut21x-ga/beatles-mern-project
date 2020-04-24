@@ -21,7 +21,11 @@ class PaulMcCartney extends Component {
       lyrics: "",
       artist: "",
       filterLetter: null,
+
       id: ""
+
+      lyricsbox: "songLyrics-Hidden",
+
     };
   }
 
@@ -29,8 +33,18 @@ class PaulMcCartney extends Component {
     this.setState({
       song: e.target.getAttribute("value"),
       lyrics: e.target.getAttribute("datavalue"),
+
       id: e.target.getAttribute("key")
+
+      lyricsbox: "songLyrics-View",
+
     });
+  };
+
+  valueCheck = () => {
+    if (this.state.lyrics == "") {
+      console.log("No Lyrics");
+    }
   };
 
   componentDidMount() {
@@ -54,6 +68,7 @@ class PaulMcCartney extends Component {
       .catch((error) => {
         console.log(error);
       });
+    this.valueCheck();
   }
 
   filterSongs = (letter) => {
@@ -103,18 +118,29 @@ submitHandler = e =>{
               <div className="trashIcon">
                 <Icon onClick={() => deleteSong(gets._id)} color="alert">
                   delete_forever
+
                 </Icon>
                 <Icon  color="primary"   onClick={()=>updateSong(gets._id,this.state.song)}>
                   edit
                 </Icon>
+
+                </Icon>{" "}
+
               </div>
             </div>
           ))}
         </div>
-        <div className="songLyrics">
-        <SongInfo value={this.state.song} datavalue={this.state.lyrics}>
-            Song!
-          </SongInfo>
+
+     
+        <div className="lyricsSpacing">
+          <br></br>
+        </div>
+        <div className={this.state.lyricsbox}>
+          <SongInfo
+            value={this.state.song}
+            datavalue={this.state.lyrics}
+          ></SongInfo>
+
         </div>
       </div>
     );

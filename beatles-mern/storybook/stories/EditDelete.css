@@ -6,4 +6,6 @@
 .Icon {
   filter: invert(0);
   background-color: white;
+  border: 2px solid rgb(148, 148, 148);
+  border-radius: 20%;
 }
