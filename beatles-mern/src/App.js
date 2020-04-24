@@ -1,12 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
-import SongInfo from "./SongInfo";
 import Navbar from "./Navbar";
 import JohnLennon from "./JohnLennon/JohnLennon";
 import PaulMcCartney from "./PaulMcCartney/PaulMcCartney";
 import GeorgeHarrison from "./GeorgeHarrison/GeorgeHarrison";
 import RingoStarr from "./RingoStarr/RingoStarr";
-import { Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Home from "./Home/Home";
 import Banner from "./Banner/Banner";
 import SongForm from "./SongForm/SongForm";
