@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { createSong } from "../ApiAccess/api";
-
+import "./SongForm.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,33 +21,60 @@ export default function SongForm() {
   const [song, setSong] = React.useState("");
   const [lyrics, setLyrics] = React.useState("");
   const valueUpdateMap = {
-      artist: setArtist,
-      song: setSong,
-      lyrics: setLyrics,
-  }
+    artist: setArtist,
+    song: setSong,
+    lyrics: setLyrics,
+  };
   const updateText = (event, type) => {
-      event.persist()
+    event.persist();
     const value = event.target.value;
-    valueUpdateMap[type](value)
+    valueUpdateMap[type](value);
   };
 
   const newSong = () => {
-      createSong({artist, song, lyrics})
-  }
+    createSong({ artist, song, lyrics });
+  };
 
   return (
-    <form className={classes.root} noValidate autoComplete="off">
-      <TextField
-        onKeyUp={(event) => updateText(event, "artist")} 
-        label="Artist"
-        variant="outlined"
-      />
-      <TextField label="Song" variant="outlined" onKeyUp={(event) => updateText(event, "song")} />
-      <TextField label="Lyrics" variant="outlined" onKeyUp={(event) => updateText(event, "lyrics")} />
-      <Button onClick={newSong} variant="contained" color="primary">
-        Submit
-      </Button>
-    </form>
+    <div className="CreateBoxes">
+      <form className={classes.root} noValidate autoComplete="off">
+        <div className="createField">
+          <div className="createInput">
+            <h3 className="createSong">Submit New Lyrics</h3>
+            <TextField
+              className="createTextField1"
+              onKeyUp={(event) => updateText(event, "artist")}
+              label="Artist"
+              variant="outlined"
+            />
+          </div>{" "}
+          <div className="createInput">
+            <TextField
+              className="createTextField2"
+              label="Song"
+              variant="outlined"
+              onKeyUp={(event) => updateText(event, "song")}
+            />
+          </div>
+          <div className="createInput">
+            <TextField
+              className="createTextField3"
+              label="Lyrics"
+              variant="outlined"
+              onKeyUp={(event) => updateText(event, "lyrics")}
+            />
+          </div>
+        </div>
+        <Button
+          onClick={newSong}
+          className="submitButton"
+          variant="contained"
+          color="primary"
+        >
+          Submit
+        </Button>
+      </form>
+    </div>
   );
 }
 
