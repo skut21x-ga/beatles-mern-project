@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./Home.css";
 import axios from "axios";
 import SongInfo from "../SongInfo"
+import Beatles from "../img/The-Beatles-Group-Photo.jpg"
+import Alphabet from "../Alphabet/Alphabet"
 
 
 class Home extends Component {
@@ -38,6 +40,10 @@ render() {
     return(
       <div>
         <div>
+        <div className="alphabetBox"><Alphabet></Alphabet></div>
+
+        <br></br><br></br>
+          <img src={Beatles} alt="" className="beatles"></img>
         {
       gets.length ? 
       gets.map(gets => 
@@ -46,9 +52,11 @@ render() {
       </div>): 
       null
     }
-      </div><div className="songLyrics">
+      </div>
+      <div className="songLyrics">
       <SongInfo value={this.state.song} datavalue={this.state.lyrics}>Song!</SongInfo>
-        </div></div>
+        </div>
+      </div>
     );
   };
 }

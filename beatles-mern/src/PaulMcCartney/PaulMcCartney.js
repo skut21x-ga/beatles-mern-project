@@ -3,6 +3,9 @@ import "./PaulMcCartney.css";
 import axios from "axios";
 import { Route, Link } from "react-router-dom";
 import SongInfo from "../SongInfo"
+import Paul from "../img/Paul-McCartney-Photo.jpg"
+import Alphabet from "../Alphabet/Alphabet"
+
 
 
 class PaulMcCartney extends Component {
@@ -38,7 +41,12 @@ class PaulMcCartney extends Component {
           return(
             <div>
               <div>
+              <div className="alphabetBox"><Alphabet></Alphabet></div>
+
               Paul McCartney<br></br><br></br>
+
+              <img src={Paul} alt="" className="profile"></img>
+
               {
             gets.length ? 
             gets.map(gets => 
