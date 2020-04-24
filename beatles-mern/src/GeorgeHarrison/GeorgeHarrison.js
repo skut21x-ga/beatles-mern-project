@@ -1,11 +1,19 @@
 import React, { Component } from "react";
 import "./GeorgeHarrison.css";
 import axios from "axios";
+<<<<<<< HEAD
 import Modal from "@material-ui/core/Modal";
 import { makeStyles } from "@material-ui/core/styles";
 import SongInfo from "../SongInfo";
 import Alphabet from "../Alphabet/Alphabet";
 import George from "../img/George-Harrison-Photo.jpg";
+=======
+import SongInfo from "../SongInfo"
+import Icon from "@material-ui/core/Icon";
+import {deleteSong} from "../ApiAccess/api"
+import George from "../img/George-Harrison-Photo.jpg"
+import Alphabet from "../Alphabet/Alphabet"
+>>>>>>> master
 
 class GeorgeHarrison extends Component {
   constructor(props) {
@@ -66,6 +74,7 @@ class GeorgeHarrison extends Component {
           <br></br>
           <br></br>
           <img src={George} alt="" className="profile"></img>
+<<<<<<< HEAD
           <div className="alphabetBox">
             <Alphabet letterSelector={this.filterSongs} />
           </div>
@@ -90,6 +99,23 @@ class GeorgeHarrison extends Component {
       </div>
     );
   }
+=======
+
+          {
+        gets.length ? 
+        gets.map(gets => 
+        <div key={gets._id} value={gets.Song} datavalue={gets.Lyrics} onClick={this.songClick} >
+          {gets.Song}
+          <Icon onClick={() => deleteSong(gets._id)} color="error">delete_forever</Icon>
+        </div>): 
+        null
+      }
+        </div><div className="songLyrics">
+        <SongInfo value={this.state.song} datavalue={this.state.lyrics}>Song!</SongInfo>
+          </div></div>
+      );
+    };
+>>>>>>> master
 }
 
 export default GeorgeHarrison;

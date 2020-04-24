@@ -1,0 +1,19 @@
+form {
+    margin: 0 30% 0 30%;
+    display: flex;
+    justify-content: center;
+
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+.email{
+    margin-right: 10px;
+}
+
+.emailBox{
+    margin-right: 20px;
+}

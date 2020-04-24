@@ -1,11 +1,19 @@
 import React, { Component } from "react";
 import "./Home.css";
 import axios from "axios";
+<<<<<<< HEAD
 import Modal from "@material-ui/core/Modal";
 import { makeStyles } from "@material-ui/core/styles";
 import SongInfo from "../SongInfo";
 import Alphabet from "../Alphabet/Alphabet";
 import Beatles from "../img/The-Beatles-Group-Photo.jpg";
+=======
+import SongInfo from "../SongInfo"
+import Icon from "@material-ui/core/Icon";
+import {deleteSong} from "../ApiAccess/api"
+import Beatles from "../img/The-Beatles-Group-Photo.jpg"
+import Alphabet from "../Alphabet/Alphabet"
+>>>>>>> master
 
 class Home extends Component {
   constructor(props) {
@@ -67,6 +75,7 @@ class Home extends Component {
           <br></br>
 
           <img src={Beatles} alt="" className="beatles"></img>
+<<<<<<< HEAD
           <div className="alphabetBox">
             <Alphabet letterSelector={this.filterSongs} />
           </div>
@@ -87,6 +96,20 @@ class Home extends Component {
           <SongInfo value={this.state.song} datavalue={this.state.lyrics}>
             Song!
           </SongInfo>
+=======
+        {
+      gets.length ? 
+      gets.map(gets => 
+      <div key={gets._id} value={gets.Song} datavalue={gets.Lyrics} onClick={this.songClick} >
+        {gets.Song}
+        <Icon onClick={() => deleteSong(gets._id)} color="error">delete_forever</Icon>
+      </div>): 
+      null
+    }
+      </div>
+      <div className="songLyrics">
+      <SongInfo value={this.state.song} datavalue={this.state.lyrics}>Song!</SongInfo>
+>>>>>>> master
         </div>
       </div>
     );

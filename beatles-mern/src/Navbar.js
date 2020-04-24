@@ -54,6 +54,11 @@ export default function Navbar() {
                   <Tab className="TabLabel" label="Ringo Starr" />
                 </Link>
               </div>
+              <div className="tabBox">
+                <Link to="/Create" value={"Create"}>
+                  <Tab className="TabLabel" label="Create" />
+                </Link>
+              </div>
             </div>
           </Tabs>
         </Paper>
