@@ -9,6 +9,7 @@ class Banner extends Component {
       <Link to="/">
         <div>
           <img src={Logo} alt="" className="logo"></img>
+          <h3 className="headerTitle">LYRICS DATABASE</h3>
         </div>
       </Link>
     );
