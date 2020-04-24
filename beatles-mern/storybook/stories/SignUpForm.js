@@ -7,7 +7,7 @@ import "./SignUpForm.css";
 class SignUpForm extends Component {
   render() {
     return (
-      <div className="footer">
+      <div>
         <h2>Sign Up</h2>
 
         <form>

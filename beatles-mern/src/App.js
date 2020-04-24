@@ -10,6 +10,7 @@ import { Route, Link } from "react-router-dom";
 import Home from "./Home/Home";
 import SongForm from "./SongForm/SongForm"
 import Banner from "./Banner/Banner"
+import SignUpForm from "./SignUpForm/SignUpForm"
 // import AuthApp from "./AuthApp/AuthApp";
 
 
@@ -32,6 +33,10 @@ function App() {
           <Route path="/Create" exact component={SongForm} />
 
         </main>
+        <div className="form">
+          <SignUpForm></SignUpForm>
+        </div>
+        
       </div>
     </div>
   );
