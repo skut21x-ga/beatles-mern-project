@@ -43,7 +43,7 @@ class PaulMcCartney extends Component {
               <div>
               <div className="alphabetBox"><Alphabet></Alphabet></div>
 
-              Paul McCartney<br></br><br></br>
+              <br></br><br></br>
 
               <img src={Paul} alt="" className="profile"></img>
 
