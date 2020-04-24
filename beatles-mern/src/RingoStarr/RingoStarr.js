@@ -1,8 +1,6 @@
 import "./RingoStarr.css";
 import Ringo from "../img/Ringo-Starr-Photo.jpg";
 import axios from "axios";
-import Modal from "@material-ui/core/Modal";
-import { makeStyles } from "@material-ui/core/styles";
 import SongInfo from "../SongInfo";
 import React, { Component } from "react";
 import Icon from "@material-ui/core/Icon";
@@ -21,11 +19,8 @@ class RingoStarr extends Component {
       lyrics: "",
       artist: "",
       filterLetter: null,
-
-      id: ""
-
+      id: "",
       lyricsbox: "songLyrics-Hidden",
-
     };
   }
 
@@ -33,11 +28,8 @@ class RingoStarr extends Component {
     this.setState({
       song: e.target.getAttribute("value"),
       lyrics: e.target.getAttribute("datavalue"),
-
-      id: e.target.getAttribute("key")
-
+      id: e.target.getAttribute("key"),
       lyricsbox: "songLyrics-View",
-
     });
   };
 
@@ -50,20 +42,19 @@ class RingoStarr extends Component {
   componentDidMount() {
     axios
       .get(
-        `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/name/Ringo%20Starr`
+        `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/name/Ringo%20Starr`,
         //`http://localhost:4000/name/Ringo%20Starr`
-        ,
         {
           headers: {
             "Access-Control-Allow-Origin":
-             "dakom1-crud-api.herokuapp.com/lists",
+              "dakom1-crud-api.herokuapp.com/lists",
           },
         }
       )
       .then((res) => {
         console.log(res);
         this.setState({ gets: res.data, filteredsongs: res.data });
-        console.log(this.state.gets)
+        console.log(this.state.gets);
       })
       .catch((error) => {
         console.log(error);
@@ -79,16 +70,16 @@ class RingoStarr extends Component {
     this.setState({ filterLetter: letter, filteredsongs: filteredSongs });
   };
 
-  changeHandles = e =>{
-    this.setState({song: e.target.value})
-    console.log(this.state)
-}
+  changeHandles = (e) => {
+    this.setState({ song: e.target.value });
+    console.log(this.state);
+  };
 
-submitHandler = e =>{
-  e.preventDefault()
-///const gets = this.state.filteredsongs;
-  updateSong(this.state.gets._id,this.state.song)
-}
+  submitHandler = (e) => {
+    e.preventDefault();
+    ///const gets = this.state.filteredsongs;
+    updateSong(this.state.gets._id, this.state.song);
+  };
 
   render() {
     const gets = this.state.filteredsongs;
@@ -103,9 +94,6 @@ submitHandler = e =>{
           <div className="alphabetBox">
             <Alphabet letterSelector={this.filterSongs} />
           </div>
-          <form onSubmit={this.submitHandler}>
-                    <div>ID<input type="text" name= "id" onChange={this.changeHandles}/></div>
-                </form> 
           {gets.map((gets) => (
             <div
               className="songName"
@@ -118,14 +106,15 @@ submitHandler = e =>{
               <div className="trashIcon">
                 <Icon onClick={() => deleteSong(gets._id)} color="alert">
                   delete_forever
-
                 </Icon>
-                <Icon  color="primary"   onClick={()=>updateSong(gets._id,this.state.song)}>
-                  edit
-                </Icon>
-
-                </Icon>{" "}
-
+                <div className="trashIcon2">
+                  <Icon
+                    color="alert"
+                    onClick={() => updateSong(gets._id, this.state.song)}
+                  >
+                    edit
+                  </Icon>
+                </div>
               </div>
             </div>
           ))}
@@ -139,6 +128,18 @@ submitHandler = e =>{
             datavalue={this.state.lyrics}
           ></SongInfo>
         </div>
+        <form onSubmit={this.submitHandler}>
+          <div className="editSongForm">
+            Edit Song Name:
+            <input
+              className="editSongBox"
+              type="text"
+              name="id"
+              placeholder="PLEASE SELECT A SONG ABOVE & TYPE NEW NAME HERE"
+              onChange={this.changeHandles}
+            />
+          </div>
+        </form>
       </div>
     );
   }

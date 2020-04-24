@@ -1,15 +1,5 @@
-input {
-  padding: 50px 100px;
-  margin: 20px;
-  font-size: larger;
-  border: solid black thin;
-}
-
-button {
-  padding: 30px 60px;
-  font-size: larger;
-  border: solid black thin;
-  border-radius: 5px;
+span {
+  margin: auto 30px;
 }
 
 .profile {
@@ -26,9 +16,19 @@ button {
   display: inline-block;
   justify-content: center;
   align-items: center;
-  opacity: 0.7;
+  opacity: 0.5;
   position: absolute;
   margin-top: -2px;
+}
+
+.trashIcon2 {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  position: absolute;
+  margin-top: -0px;
+  margin-left: -60px;
 }
 
 .profile {
@@ -47,4 +47,21 @@ button {
 
 .lyricsSpacing {
   padding-bottom: 20px;
+}
+
+.editSongForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: -5px;
+}
+.editSongBox {
+  margin-top: 10px;
+  font-size: 12px;
+  padding: 25px;
+  width: 350px;
+
+  text-align: center;
 }
