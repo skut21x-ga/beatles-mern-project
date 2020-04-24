@@ -19,7 +19,7 @@ export function deleteSong(id) {
 }
 
 export function updateSong(id, data) {
-  let localUrl = `http://localhost:4000/${id}`;
+  // let localUrl = `http://localhost:4000/${id}`;
   let URL = `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/${id}`;
 
   axios
