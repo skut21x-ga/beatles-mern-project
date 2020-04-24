@@ -1,0 +1,41 @@
+.CreateBoxes {
+  margin-top: 50px;
+  margin-bottom: 90px;
+  display: inline-block;
+  justify-content: center;
+  flex-flow: row;
+  padding: 0px 50px;
+  border: 0.5px solid black;
+  background-color: rgba(243, 243, 243, 0.911);
+  height: 400px;
+}
+
+.createInput {
+  width: 500px;
+  padding: 10px;
+}
+
+.createField {
+  padding-right: 260px;
+}
+
+.createTextField1 {
+  background-color: white;
+  width: 500px;
+}
+
+.createTextField2 {
+  background-color: white;
+  width: 500px;
+}
+
+.createTextField3 {
+  background-color: white;
+  width: 500px;
+}
+
+.createSong {
+  font-family: Lato;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}

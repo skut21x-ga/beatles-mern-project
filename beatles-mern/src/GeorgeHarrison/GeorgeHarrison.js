@@ -53,7 +53,7 @@ class GeorgeHarrison extends Component {
   filterSongs = (letter) => {
     console.log(letter, "from Artist.js");
     let filteredSongs = this.state.gets.filter((song) => {
-      return song.Song.toLowerCase().charAt(0) == letter.toLowerCase();
+      return song.Song.toLowerCase().charAt(0) === letter.toLowerCase();
     });
     this.setState({ filterLetter: letter, filteredsongs: filteredSongs });
   };
@@ -71,26 +71,28 @@ class GeorgeHarrison extends Component {
           <div className="alphabetBox">
             <Alphabet letterSelector={this.filterSongs} />
           </div>
-          {gets.map((gets) => {
-            return (
-              <div
-                key={gets._id}
-                value={gets.Song}
-                datavalue={gets.Lyrics}
-                onClick={this.songClick}
-              >
-                {gets.Song}
-                <Icon onClick={() => deleteSong(gets._id)} color="error">
+          {gets.map((gets) => (
+            <div
+              className="songName"
+              key={gets._id}
+              value={gets.Song}
+              datavalue={gets.Lyrics}
+              onClick={this.songClick}
+            >
+              {gets.Song}
+              <div className="trashIcon">
+                <Icon onClick={() => deleteSong(gets._id)} color="alert">
                   delete_forever
                 </Icon>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
         <div className="songLyrics">
-          <SongInfo value={this.state.song} datavalue={this.state.lyrics}>
-            Song!
-          </SongInfo>
+          <SongInfo
+            value={this.state.song}
+            datavalue={this.state.lyrics}
+          ></SongInfo>
         </div>
       </div>
     );

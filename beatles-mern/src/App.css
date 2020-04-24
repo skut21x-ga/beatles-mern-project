@@ -20,11 +20,18 @@
 .alphabetBox {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: -10px;
 }
+
 .BannerBox {
   background-color: black;
   padding-bottom: 20px;
   margin-bottom: -23px;
   padding-top: 15px;
+}
+
+.SubmitRoute {
+  background-image: url("https://github.com/skut21x-ga/beatles-mern-project/blob/master/beatles-mern/src/img/Imagine.jpg?raw=true");
+  background-size: cover;
+  background-repeat: no-repeat;
 }

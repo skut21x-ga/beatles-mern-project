@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Banner.css";
-import Logo from "../img/1200px-Beatles_logo.svg.png";
+import Logo from "../img/1200px-Beatles_logoLyrics.png";
 import { Route, Link } from "react-router-dom";
 
 class Banner extends Component {

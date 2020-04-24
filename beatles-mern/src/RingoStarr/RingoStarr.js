@@ -53,7 +53,7 @@ class RingoStarr extends Component {
   filterSongs = (letter) => {
     console.log(letter, "from the artist page");
     let filteredSongs = this.state.gets.filter((song) => {
-      return song.Song.toLowerCase().charAt(0) == letter.toLowerCase();
+      return song.Song.toLowerCase().charAt(0) === letter.toLowerCase();
     });
     this.setState({ filterLetter: letter, filteredsongs: filteredSongs });
   };
@@ -71,22 +71,22 @@ class RingoStarr extends Component {
           <div className="alphabetBox">
             <Alphabet letterSelector={this.filterSongs} />
           </div>
-          {gets.length
-            ? gets.map((gets) => (
-                <div
-                  key={gets._id}
-                  value={gets.Song}
-                  datavalue={gets.Lyrics}
-                  onClick={this.songClick}
-                >
-                  {gets.Song}
-
-                  <Icon onClick={() => deleteSong(gets._id)} color="error">
-                    delete_forever
-                  </Icon>
-                </div>
-              ))
-            : null}
+          {gets.map((gets) => (
+            <div
+              className="songName"
+              key={gets._id}
+              value={gets.Song}
+              datavalue={gets.Lyrics}
+              onClick={this.songClick}
+            >
+              {gets.Song}
+              <div className="trashIcon">
+                <Icon onClick={() => deleteSong(gets._id)} color="alert">
+                  delete_forever
+                </Icon>
+              </div>
+            </div>
+          ))}
         </div>
         <div className="songLyrics">
           <SongInfo value={this.state.song} datavalue={this.state.lyrics}>

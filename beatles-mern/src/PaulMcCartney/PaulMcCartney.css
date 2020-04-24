@@ -3,7 +3,20 @@ span {
 }
 
 .profile {
-  height: 267px;
+  height: 270px;
   margin: 5px;
   margin-top: -15px;
+}
+
+.trashIcon {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+  position: absolute;
+  margin-top: -2px;
+}
+
+.songName {
+  margin-top: 15px;
 }

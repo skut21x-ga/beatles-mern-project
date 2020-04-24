@@ -1,0 +1,28 @@
+.songModal {
+  width: 70vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  background-color: rgb(247, 247, 247);
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.songLyrics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.textBox {
+  width: 500px;
+  line-height: 28px;
+  margin-bottom: 50px;
+}
+
+.songTitle {
+  font: 40px;
+  font-weight: 900;
+  margin-top: 30px;
+}
