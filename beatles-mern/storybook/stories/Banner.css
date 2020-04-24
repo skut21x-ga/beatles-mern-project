@@ -1,10 +1,10 @@
-.logo{
+.logo {
   height: 200px;
-
 }
-.logoBox{
+.logoBox {
   border: 2px solid black;
   width: 600px;
   display: flex;
   justify-content: center;
+  background-color: black;
 }
