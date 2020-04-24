@@ -55,6 +55,14 @@ class JohnLennon extends Component {
     this.setState({ filterLetter: letter });
   };
 
+  filterSongs = (letter) => {
+    console.log(
+      letter,
+      "this data has been moved from alphabet to JohnLennon.js"
+    );
+    this.setState({ filterLetter: letter });
+  };
+
   render() {
     const { gets } = this.state;
 

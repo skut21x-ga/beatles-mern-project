@@ -2,6 +2,7 @@ span {
   margin: auto 30px;
 }
 
+<<<<<<< HEAD
 .modularComponent {
   display: flex;
   background-color: black;
@@ -40,3 +41,8 @@ span {
 .closeButtonText {
   margin-top: 13px;
 }
+=======
+.profile {
+  height: 150px;
+}
+>>>>>>> master
