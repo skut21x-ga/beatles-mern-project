@@ -22,10 +22,6 @@ export default function EditDelete() {
       <Grid item xs={4}>
         <Grid item xs={8}>
           <DeleteIcon className="Icon" /> <EditIcon className="Icon" />
-          {"   "}
-          or {"   "}
-          <DeleteOutlinedIcon className="Icon" />{" "}
-          <EditOutlinedIcon className="Icon" />
         </Grid>
       </Grid>
     </Grid>
