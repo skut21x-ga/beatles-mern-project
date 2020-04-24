@@ -8,6 +8,7 @@ import Alphabet from "../Alphabet/Alphabet";
 import Paul from "../img/Paul-McCartney-Photo.jpg";
 import Icon from "@material-ui/core/Icon";
 import { deleteSong } from "../ApiAccess/api";
+import { updateSong } from "../ApiAccess/api";
 
 class PaulMcCartney extends Component {
   constructor(props) {
@@ -20,7 +21,11 @@ class PaulMcCartney extends Component {
       lyrics: "",
       artist: "",
       filterLetter: null,
+
+      id: ""
+
       lyricsbox: "songLyrics-Hidden",
+
     };
   }
 
@@ -28,7 +33,11 @@ class PaulMcCartney extends Component {
     this.setState({
       song: e.target.getAttribute("value"),
       lyrics: e.target.getAttribute("datavalue"),
+
+      id: e.target.getAttribute("key")
+
       lyricsbox: "songLyrics-View",
+
     });
   };
 
@@ -41,10 +50,12 @@ class PaulMcCartney extends Component {
   componentDidMount() {
     axios
       .get(
-        `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/name/Paul%20McCartney`,
+        `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/name/Paul%20McCartney`
+        //`http://localhost:4000/name/Paul%20McCartney`
+        ,
         {
           headers: {
-            "Access-Control-Allow-Origin":
+           "Access-Control-Allow-Origin":
               "dakom1-crud-api.herokuapp.com/lists",
           },
         }
@@ -52,6 +63,7 @@ class PaulMcCartney extends Component {
       .then((res) => {
         console.log(res);
         this.setState({ gets: res.data, filteredsongs: res.data });
+        console.log(this.state.gets)
       })
       .catch((error) => {
         console.log(error);
@@ -67,6 +79,17 @@ class PaulMcCartney extends Component {
     this.setState({ filterLetter: letter, filteredsongs: filteredSongs });
   };
 
+  changeHandles = e =>{
+    this.setState({song: e.target.value})
+    console.log(this.state)
+}
+
+submitHandler = e =>{
+  e.preventDefault()
+///const gets = this.state.filteredsongs;
+  updateSong(this.state.gets._id,this.state.song)
+}
+
   render() {
     const gets = this.state.filteredsongs;
 
@@ -80,6 +103,9 @@ class PaulMcCartney extends Component {
           <div className="alphabetBox">
             <Alphabet letterSelector={this.filterSongs} />
           </div>
+          <form onSubmit={this.submitHandler}>
+                    <div>ID<input type="text" name= "id" onChange={this.changeHandles}/></div>
+                </form>  
           {gets.map((gets) => (
             <div
               className="songName"
@@ -92,11 +118,20 @@ class PaulMcCartney extends Component {
               <div className="trashIcon">
                 <Icon onClick={() => deleteSong(gets._id)} color="alert">
                   delete_forever
+
+                </Icon>
+                <Icon  color="primary"   onClick={()=>updateSong(gets._id,this.state.song)}>
+                  edit
+                </Icon>
+
                 </Icon>{" "}
+
               </div>
             </div>
           ))}
         </div>
+
+     
         <div className="lyricsSpacing">
           <br></br>
         </div>
@@ -105,6 +140,7 @@ class PaulMcCartney extends Component {
             value={this.state.song}
             datavalue={this.state.lyrics}
           ></SongInfo>
+
         </div>
       </div>
     );
