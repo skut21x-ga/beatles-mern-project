@@ -31,6 +31,8 @@ function App() {
           <Route path="/PaulMcCartney" exact component={PaulMcCartney} />
           <Route path="/GeorgeHarrison" exact component={GeorgeHarrison} />
           <Route path="/RingoStarr" exact component={RingoStarr} />
+        </main>
+        <main className="SubmitRoute">
           <Route path="/Create" exact component={SongForm} />
         </main>
         <div className="form">
