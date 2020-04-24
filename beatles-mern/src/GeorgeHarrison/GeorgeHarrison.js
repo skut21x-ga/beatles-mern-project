@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import "./GeorgeHarrison.css";
 import axios from "axios";
-import Modal from "@material-ui/core/Modal";
-import { makeStyles } from "@material-ui/core/styles";
 import SongInfo from "../SongInfo";
 import Alphabet from "../Alphabet/Alphabet";
 import Icon from "@material-ui/core/Icon";
 import { deleteSong } from "../ApiAccess/api";
 import George from "../img/George-Harrison-Photo.jpg";
+import { Route } from "react-router-dom";
 
 class GeorgeHarrison extends Component {
   constructor(props) {
@@ -20,6 +19,7 @@ class GeorgeHarrison extends Component {
       lyrics: "",
       artist: "",
       filterLetter: null,
+      lyricsbox: "songLyrics-Hidden",
     };
   }
 
@@ -27,7 +27,14 @@ class GeorgeHarrison extends Component {
     this.setState({
       song: e.target.getAttribute("value"),
       lyrics: e.target.getAttribute("datavalue"),
+      lyricsbox: "songLyrics-View",
     });
+  };
+
+  valueCheck = () => {
+    if (this.state.lyrics == "") {
+      console.log("No Lyrics");
+    }
   };
 
   componentDidMount() {
@@ -48,6 +55,7 @@ class GeorgeHarrison extends Component {
       .catch((error) => {
         console.log(error);
       });
+    this.valueCheck();
   }
 
   filterSongs = (letter) => {
@@ -60,7 +68,6 @@ class GeorgeHarrison extends Component {
 
   render() {
     const gets = this.state.filteredsongs;
-
     return (
       <div>
         <div>
@@ -88,7 +95,10 @@ class GeorgeHarrison extends Component {
             </div>
           ))}
         </div>
-        <div className="songLyrics">
+        <div className="lyricsSpacing">
+          <br></br>
+        </div>
+        <div className={this.state.lyricsbox}>
           <SongInfo
             value={this.state.song}
             datavalue={this.state.lyrics}

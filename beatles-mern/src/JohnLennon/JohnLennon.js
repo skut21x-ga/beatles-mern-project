@@ -1,6 +1,4 @@
 import axios from "axios";
-import Modal from "@material-ui/core/Modal";
-import { makeStyles } from "@material-ui/core/styles";
 import SongInfo from "../SongInfo";
 import React, { Component } from "react";
 import Icon from "@material-ui/core/Icon";
@@ -20,6 +18,7 @@ class JohnLennon extends Component {
       lyrics: "",
       artist: "",
       filterLetter: null,
+      lyricsbox: "songLyrics-Hidden",
     };
   }
 
@@ -27,7 +26,14 @@ class JohnLennon extends Component {
     this.setState({
       song: e.target.getAttribute("value"),
       lyrics: e.target.getAttribute("datavalue"),
+      lyricsbox: "songLyrics-View",
     });
+  };
+
+  valueCheck = () => {
+    if (this.state.lyrics == "") {
+      console.log("No Lyrics");
+    }
   };
 
   componentDidMount() {
@@ -48,6 +54,7 @@ class JohnLennon extends Component {
       .catch((error) => {
         console.log(error);
       });
+    this.valueCheck();
   }
 
   filterSongs = (letter) => {
@@ -88,10 +95,14 @@ class JohnLennon extends Component {
             </div>
           ))}
         </div>
-        <div className="songLyrics">
-          <SongInfo value={this.state.song} datavalue={this.state.lyrics}>
-            Song!
-          </SongInfo>
+        <div className="lyricsSpacing">
+          <br></br>
+        </div>
+        <div className={this.state.lyricsbox}>
+          <SongInfo
+            value={this.state.song}
+            datavalue={this.state.lyrics}
+          ></SongInfo>
         </div>
       </div>
     );

@@ -20,6 +20,7 @@ class RingoStarr extends Component {
       lyrics: "",
       artist: "",
       filterLetter: null,
+      lyricsbox: "songLyrics-Hidden",
     };
   }
 
@@ -27,7 +28,14 @@ class RingoStarr extends Component {
     this.setState({
       song: e.target.getAttribute("value"),
       lyrics: e.target.getAttribute("datavalue"),
+      lyricsbox: "songLyrics-View",
     });
+  };
+
+  valueCheck = () => {
+    if (this.state.lyrics == "") {
+      console.log("No Lyrics");
+    }
   };
 
   componentDidMount() {
@@ -48,6 +56,7 @@ class RingoStarr extends Component {
       .catch((error) => {
         console.log(error);
       });
+    this.valueCheck();
   }
 
   filterSongs = (letter) => {
@@ -83,15 +92,19 @@ class RingoStarr extends Component {
               <div className="trashIcon">
                 <Icon onClick={() => deleteSong(gets._id)} color="alert">
                   delete_forever
-                </Icon>
+                </Icon>{" "}
               </div>
             </div>
           ))}
         </div>
-        <div className="songLyrics">
-          <SongInfo value={this.state.song} datavalue={this.state.lyrics}>
-            Song!
-          </SongInfo>
+        <div className="lyricsSpacing">
+          <br></br>
+        </div>
+        <div className={this.state.lyricsbox}>
+          <SongInfo
+            value={this.state.song}
+            datavalue={this.state.lyrics}
+          ></SongInfo>
         </div>
       </div>
     );

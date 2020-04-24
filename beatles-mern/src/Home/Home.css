@@ -19,6 +19,10 @@ body {
   margin-top: -15px;
 }
 
+.songName {
+  margin-top: 15px;
+}
+
 .trashIcon {
   display: inline-block;
   justify-content: center;
@@ -28,6 +32,20 @@ body {
   margin-top: -2px;
 }
 
-.songName {
-  margin-top: 15px;
+.profile {
+  height: 300px;
+  margin: 5px;
+  margin-top: -15px;
+}
+
+.songLyrics-View {
+  display: flex;
+}
+
+.songLyrics-Hidden {
+  display: none;
+}
+
+.lyricsSpacing {
+  padding-bottom: 20px;
 }
