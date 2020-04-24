@@ -4,7 +4,8 @@ import axios from "axios";
 import SongInfo from "../SongInfo"
 import Icon from "@material-ui/core/Icon";
 import {deleteSong} from "../ApiAccess/api"
-
+import Beatles from "../img/The-Beatles-Group-Photo.jpg"
+import Alphabet from "../Alphabet/Alphabet"
 
 class Home extends Component {
   constructor(props) {
@@ -40,6 +41,10 @@ render() {
     return(
       <div>
         <div>
+        <div className="alphabetBox"><Alphabet></Alphabet></div>
+
+        <br></br><br></br>
+          <img src={Beatles} alt="" className="beatles"></img>
         {
       gets.length ? 
       gets.map(gets => 
@@ -49,9 +54,11 @@ render() {
       </div>): 
       null
     }
-      </div><div className="songLyrics">
+      </div>
+      <div className="songLyrics">
       <SongInfo value={this.state.song} datavalue={this.state.lyrics}>Song!</SongInfo>
-        </div></div>
+        </div>
+      </div>
     );
   };
 }

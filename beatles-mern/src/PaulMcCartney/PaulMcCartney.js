@@ -6,6 +6,8 @@ import SongInfo from "../SongInfo"
 import Icon from "@material-ui/core/Icon";
 import {deleteSong} from "../ApiAccess/api"
 
+import Paul from "../img/Paul-McCartney-Photo.jpg"
+import Alphabet from "../Alphabet/Alphabet"
 
 class PaulMcCartney extends Component {
     constructor(props) {
@@ -40,7 +42,12 @@ class PaulMcCartney extends Component {
           return(
             <div>
               <div>
-              Paul McCartney<br></br><br></br>
+              <div className="alphabetBox"><Alphabet></Alphabet></div>
+
+              <br></br><br></br>
+
+              <img src={Paul} alt="" className="profile"></img>
+
               {
             gets.length ? 
             gets.map(gets => 

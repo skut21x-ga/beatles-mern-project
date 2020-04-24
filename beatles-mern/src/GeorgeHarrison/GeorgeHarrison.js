@@ -4,7 +4,8 @@ import axios from "axios";
 import SongInfo from "../SongInfo"
 import Icon from "@material-ui/core/Icon";
 import {deleteSong} from "../ApiAccess/api"
-
+import George from "../img/George-Harrison-Photo.jpg"
+import Alphabet from "../Alphabet/Alphabet"
 
 class GeorgeHarrison extends Component {
   constructor(props) {
@@ -39,7 +40,11 @@ componentDidMount(){
       return(
         <div>
           <div>
-          George Harrison<br></br><br></br>
+          <div className="alphabetBox"><Alphabet></Alphabet></div>
+
+          <br></br><br></br>
+          <img src={George} alt="" className="profile"></img>
+
           {
         gets.length ? 
         gets.map(gets => 
