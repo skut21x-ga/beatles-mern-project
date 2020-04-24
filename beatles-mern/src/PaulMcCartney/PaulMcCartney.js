@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import "./PaulMcCartney.css";
 import axios from "axios";
-import Modal from "@material-ui/core/Modal";
-import { makeStyles } from "@material-ui/core/styles";
+// import Modal from "@material-ui/core/Modal";
+// import { makeStyles } from "@material-ui/core/styles";
 import SongInfo from "../SongInfo";
 import Alphabet from "../Alphabet/Alphabet";
 import Paul from "../img/Paul-McCartney-Photo.jpg";
+import Icon from "@material-ui/core/Icon";
+import { deleteSong } from "../ApiAccess/api";
 
 class PaulMcCartney extends Component {
   constructor(props) {
@@ -79,6 +81,9 @@ class PaulMcCartney extends Component {
                   onClick={this.songClick}
                 >
                   {gets.Song}
+                  <Icon onClick={() => deleteSong(gets._id)} color="error">
+                    delete_forever
+                  </Icon>
                 </div>
               ))
             : null}
