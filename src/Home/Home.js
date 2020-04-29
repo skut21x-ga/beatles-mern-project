@@ -92,6 +92,18 @@ class Home extends Component {
           <div className="alphabetBox">
             <Alphabet letterSelector={this.filterSongs} />
           </div>{" "}
+          <form onSubmit={this.submitHandler}>
+            <div className="editSongForm">
+              Edit Song Name:
+              <input
+                className="editSongBox"
+                type="text"
+                name="id"
+                placeholder="TYPE HERE & CLICK PENCIL NEXT TO SONG TO RENAME IT"
+                onChange={this.changeHandles}
+              />
+            </div>
+          </form>
           {gets.map((gets) => (
             <div
               className="songName"
@@ -100,19 +112,20 @@ class Home extends Component {
               datavalue={gets.Lyrics}
               onClick={this.songClick}
             >
+              {" "}
+              <div className="trashIcon2">
+                <Icon
+                  color="alert"
+                  onClick={() => updateSong(gets._id, this.state.song)}
+                >
+                  edit
+                </Icon>
+              </div>
               {gets.Song}
               <div className="trashIcon">
                 <Icon onClick={() => deleteSong(gets._id)} color="alert">
                   delete_forever
                 </Icon>
-                <div className="trashIcon2">
-                  <Icon
-                    color="alert"
-                    onClick={() => updateSong(gets._id, this.state.song)}
-                  >
-                    edit
-                  </Icon>
-                </div>
               </div>
             </div>
           ))}
@@ -126,18 +139,6 @@ class Home extends Component {
             datavalue={this.state.lyrics}
           ></SongInfo>
         </div>{" "}
-        <form onSubmit={this.submitHandler}>
-          <div className="editSongForm">
-            Edit Song Name:
-            <input
-              className="editSongBox"
-              type="text"
-              name="id"
-              placeholder="PLEASE SELECT A SONG ABOVE & TYPE NEW NAME HERE"
-              onChange={this.changeHandles}
-            />
-          </div>
-        </form>
       </div>
     );
   }
