@@ -1,10 +1,11 @@
 import axios from "axios";
 
 export function deleteSong(id) {
+  let URL = `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/${id}`;
+
   axios
     .delete(
-      `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/${id}`,
-      {
+      URL,      {
         headers: {
           "Access-Control-Allow-Origin": "dakom1-crud-api.herokuapp.com/lists",
         },
