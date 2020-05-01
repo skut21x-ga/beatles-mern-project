@@ -5,10 +5,10 @@
 ##### This app is designed to be a resource to organize and view The Beatles' extensive cataolog of music. We specifically designed this application with users in mind. Users can search the API we built to view Beatles songs and their lyrics. We also decided to include each band member's solo catalogs as well. Users can then make updates to song name, delete songs, and add new songs. If a user decised to add a new song the "artist" value must be one previously used.
 
 ### Project by:
-
-- Dami Komolafe
-- Stu Kelly
-- Scott Kutler
+- [Stu Kelly](sbkelly9@gmail.com)
+- [Dami Komolafe](damik94@gmail.com)
+- [Scott Kutler](scott.kutler@gmail.com)
+#
 
 ### Screenshot
 
