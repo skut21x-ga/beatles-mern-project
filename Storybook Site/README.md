@@ -4,8 +4,8 @@
 
 #### Authored by:
 - [Scott Kutler](scott.kutler@gmail.com)
-- [Dami Komolafe] (damik94@gmail.com)
-- [Stu Kelly] (sbkelly9@gmail.com)
+- [Dami Komolafe](damik94@gmail.com)
+- [Stu Kelly](sbkelly9@gmail.com)
 #
 
 #### This is a Storybook component library. It features:
