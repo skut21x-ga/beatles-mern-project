@@ -12,7 +12,7 @@
 
 ### Screenshot
 
-![Beatles API Front End Screenshot ](https://github.com/skut21x-ga/beatles-mern-project/blob/master/beatles-mern/src/img/screenshot.png?raw=true" "Screenshot")
+![Beatles API Front End Screenshot ](https://github.com/skut21x-ga/beatles-mern-project/blob/master/src/img/screenshot.png?raw=true" "Screenshot")
 
 #
 #### Deployed URL: beatlesapi.netlify.app
