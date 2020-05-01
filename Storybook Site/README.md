@@ -40,7 +40,6 @@ Visit the deployed storybook at http://skut21x-ga.github.io/Beatles%20Storybook
 
 Storybook Repo Folder Available at:
 https://github.com/skut21x-ga/beatles-mern-project/tree/master/storybook
- 80 
 
 
 
