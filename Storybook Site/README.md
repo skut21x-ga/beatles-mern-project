@@ -3,9 +3,9 @@
 ##### Version 1.0
 
 #### Authored by:
-- Dami Komolafe
-- Stu Kelly
-- Scott Kutler
+- [Scott Kutler](scott.kutler@gmail.com)
+- [Dami Komolafe] (damik94@gmail.com)
+- [Stu Kelly] (sbkelly9@gmail.com)
 #
 
 #### This is a Storybook component library. It features:
@@ -53,11 +53,6 @@ https://github.com/skut21x-ga/beatles-mern-project/tree/master/storybook
 #### Library Screenshot
 
 ![Screenshot](https://github.com/skut21x-ga/beatles-mern-project/blob/master/storybook/storybookScreenshot.png?raw=true)
-
-#### Authors
-
-[Scott Kutler](scott.kutler@gmail.com)
-[
 
 #### License
 
