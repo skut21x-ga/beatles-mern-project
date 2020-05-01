@@ -4,6 +4,8 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { createSong } from "../ApiAccess/api";
 import "./SongForm.css";
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,18 +37,34 @@ export default function SongForm() {
     createSong({ artist, song, lyrics });
   };
 
+  const handleSelect = (event) => {
+    setArtist(event.target.value);
+  };
+
   return (
     <div className="CreateBoxes">
       <form className={classes.root} noValidate autoComplete="off">
         <div className="createField">
           <div className="createInput">
             <h3 className="createSong">Submit New Lyrics</h3>
-            <TextField
+            {/* <TextField
               className="createTextField1"
               onKeyUp={(event) => updateText(event, "artist")}
               label="Artist"
               variant="outlined"
-            />
+            /> */}
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={artist}
+              onChange={handleSelect}
+            >
+              <MenuItem value={"The Beatles"}>The Beatles</MenuItem>
+              <MenuItem value={"John Lennon"}>John Lennon</MenuItem>
+              <MenuItem value={"Paul McCartney"}>Paul McCartney</MenuItem>
+              <MenuItem value={"George Harrison"}>George Harrison</MenuItem>
+              <MenuItem value={"Ring Starr"}>Ringo Starr</MenuItem>
+            </Select>
           </div>{" "}
           <div className="createInput">
             <TextField
