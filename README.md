@@ -25,9 +25,7 @@
 
 #### Dependencies/Stacks Used
 
-##### For this project we built an API using Node, Express, and Mongoose that serves JSON data. The front end was built using React that updates the UI and makes requests to the API.We used elements from Material-UI for a smoother UI. We utilized the following technologies for this frontend: React, React-Router, Material-UI, Axios, Node,
-
-#
+##### For this project we firstbuilt an API using Node, Express, and Mongoose that serves JSON data. We then utilized the following technologies for this front-end projet : React, React-Router, Material-UI, Axios, NPM , & Node. The front end was built using React that updates the UI and makes requests to the API. We used elements from Material-UI for a smoother UI. We also have a Storybook Component Library [available](https://skut21x-ga.github.io/Beatles%20Storybook/?path=/story/components--website-banner)
 
 #### Project Status/Tracking
 
