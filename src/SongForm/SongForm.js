@@ -60,6 +60,7 @@ export default function SongForm() {
               value={artist}
               onChange={handleSelect}
             >
+              <MenuItem value={""}>- PLEASE SELECT ARTIST -</MenuItem>
               <MenuItem value={"The Beatles"}>The Beatles</MenuItem>
               <MenuItem value={"John Lennon"}>John Lennon</MenuItem>
               <MenuItem value={"Paul McCartney"}>Paul McCartney</MenuItem>
