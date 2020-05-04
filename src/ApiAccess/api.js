@@ -53,5 +53,5 @@ export function createSong(data) {
     .then((res) => {
       console.log(res);
     });
-  alert("new song created");
+  alert("New Song Created in Database");
 }
