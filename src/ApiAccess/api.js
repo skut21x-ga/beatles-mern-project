@@ -53,7 +53,5 @@ export function createSong(data) {
     .then((res) => {
       console.log(res);
     });
-  /* window.setTimeout(function () {
-    window.location.reload(false);
-  }, 500); */
+  alert("new song created");
 }

@@ -64,7 +64,7 @@ export default function SongForm() {
               <MenuItem value={"John Lennon"}>John Lennon</MenuItem>
               <MenuItem value={"Paul McCartney"}>Paul McCartney</MenuItem>
               <MenuItem value={"George Harrison"}>George Harrison</MenuItem>
-              <MenuItem value={"Ring Starr"}>Ringo Starr</MenuItem>
+              <MenuItem value={"Ringo Starr"}>Ringo Starr</MenuItem>
             </Select>
           </div>{" "}
           <div className="createInput">
