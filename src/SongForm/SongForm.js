@@ -38,7 +38,7 @@ export default function SongForm() {
   };
 
   const handleSelect = (event) => {
-    event.persist();
+    event.preventDefault();
     setArtist(event.target.value);
   };
 
