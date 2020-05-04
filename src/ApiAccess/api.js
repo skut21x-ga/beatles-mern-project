@@ -4,13 +4,11 @@ export function deleteSong(id) {
   let URL = `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/${id}`;
 
   axios
-    .delete(
-      URL,      {
-        headers: {
-          "Access-Control-Allow-Origin": "dakom1-crud-api.herokuapp.com/lists",
-        },
-      }
-    )
+    .delete(URL, {
+      headers: {
+        "Access-Control-Allow-Origin": "dakom1-crud-api.herokuapp.com/lists",
+      },
+    })
     .then((res) => {
       console.log(res);
     });
@@ -55,7 +53,7 @@ export function createSong(data) {
     .then((res) => {
       console.log(res);
     });
-  window.setTimeout(function () {
+  /* window.setTimeout(function () {
     window.location.reload(false);
-  }, 500);
+  }, 500); */
 }
