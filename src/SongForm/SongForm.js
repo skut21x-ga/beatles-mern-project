@@ -59,8 +59,12 @@ export default function SongForm() {
               id="demo-simple-select"
               value={artist}
               onChange={handleSelect}
+              displayEmpty
             >
-              <MenuItem value={""}>- PLEASE SELECT ARTIST -</MenuItem>
+              HELLO
+              <MenuItem value={""}>
+                <em>Click to select an artist</em>
+              </MenuItem>
               <MenuItem value={"The Beatles"}>The Beatles</MenuItem>
               <MenuItem value={"John Lennon"}>John Lennon</MenuItem>
               <MenuItem value={"Paul McCartney"}>Paul McCartney</MenuItem>
