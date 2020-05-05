@@ -54,10 +54,6 @@ https://github.com/skut21x-ga/beatles-mern-project/tree/master/beatles-mern/stor
 
 ![Screenshot](https://github.com/skut21x-ga/beatles-mern-project/blob/master/storybook/storybookScreenshot.png?raw=true)
 
-#### Authors
-
-[Scott Kutler](scott.kutler@gmail.com)
-[
 
 #### License
 
