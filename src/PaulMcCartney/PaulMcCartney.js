@@ -54,9 +54,9 @@ class PaulMcCartney extends Component {
         }
       )
       .then((res) => {
-        console.log(res);
+        //console.log(res);
         this.setState({ gets: res.data, filteredsongs: res.data });
-        console.log(this.state.gets);
+        console.log(this.state.gets.sort());
       })
       .catch((error) => {
         console.log(error);
@@ -85,8 +85,15 @@ class PaulMcCartney extends Component {
 
   render() {
     const gets = this.state.filteredsongs;
-
-    return (
+    gets.sort(function(a, b){
+      var nameA=a.Song, nameB=b.Song
+      if (nameA < nameB) //sort string ascending
+          return -1 
+      if (nameA > nameB)
+          return 1
+      return 0 //default return value (no sorting)
+    })  
+      return (
       <div>
         <div>
           {this.state.artist}

@@ -20,7 +20,9 @@ export function deleteSong(id) {
 export function updateSong(id, data) {
   // let localUrl = `http://localhost:4000/${id}`;
   let URL = `https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/${id}`;
-
+  
+  if (data.length >=1) {
+  
   axios
     .put(
       URL,
@@ -37,6 +39,7 @@ export function updateSong(id, data) {
   window.setTimeout(function () {
     window.location.reload(false);
   }, 500);
+}
 }
 
 export function createSong(data) {
