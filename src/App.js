@@ -67,10 +67,7 @@ class App extends Component {
         // this.setState({ isLoggedIn: true });
         alert("User Created");
       })
-      .catch(
-        (err) => console.log(err),
-        alert("Please enter unique email/password combination")
-      );
+      .catch((err) => console.log(err));
   }
   render() {
     return (
