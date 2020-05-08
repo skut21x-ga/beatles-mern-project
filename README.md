@@ -25,7 +25,7 @@
 
 ### How to Login / Create User
 ##### We utilized JWT on our backend to authenticate users. Once authenticated, users can traverse our navigation bar to view all Beatle's artists and also enter new song lyrics. Without logging in, this isn't possible. 
-##### To login to a test account, use the credentials "testuser@google.com" for the username and "password" for the password". To create a new user, type in a full e-mail address and a password into the signup field. If create user is succesful, it will automatically log you in. 
+##### To login to a test account, use the credentials "testuser@google.com" for the username and "password" for the password". To create a new user, type in a full e-mail address and a password into the signup field. If signup is succesful, it will automatically log you in. 
 
 #### Dependencies/Stacks Used
 
