@@ -23,9 +23,13 @@
 
 #
 
+### How to Login / Create User
+##### We utilized JWT on our backend to authenticate users. Once authenticated, users can traverse our navigation bar to view all Beatle's artists and also enter new song lyrics. Without logging in, this isn't possible. 
+##### To login to a test account, use the credentials "testuser@google.com" for the username and "password" for the password". To create a new user, type in a full e-mail address and a password into the signup field. If signup is succesful, it will automatically log you in. 
+
 #### Dependencies/Stacks Used
 
-##### For this project we firstbuilt an API using Node, Express, and Mongoose that serves JSON data. We then utilized the following technologies for this front-end projet : React, React-Router, Material-UI, Axios, NPM , & Node. The front end was built using React that updates the UI and makes requests to the API. We used elements from Material-UI for a smoother UI. We also have a Storybook Component Library [available](https://skut21x-ga.github.io/Beatles%20Storybook/?path=/story/components--website-banner)
+##### For this project we firstbuilt an API using Node, Express, and Mongoose that serves JSON data. We then utilized the following technologies for this front-end projet : React, React-Router, Material-UI, Axios, Passport, NPM , & Node. The front end was built using React that updates the UI and makes requests to the API. We used elements from Material-UI for a smoother UI. We also have a Storybook Component Library [available](https://skut21x-ga.github.io/Beatles%20Storybook/?path=/story/components--website-banner)
 
 #### Project Status/Tracking
 
