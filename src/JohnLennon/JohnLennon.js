@@ -74,18 +74,27 @@ class JohnLennon extends Component {
 
   changeHandles = (e) => {
     this.setState({ song: e.target.value });
-    console.log(this.state);
+    console.log(this.state.song);
   };
 
   submitHandler = (e) => {
     e.preventDefault();
     ///const gets = this.state.filteredsongs;
+    if (this.state.song.length >= 1){
     updateSong(this.state.gets._id, this.state.song);
+    }
   };
 
   render() {
     const gets = this.state.filteredsongs;
-
+    gets.sort(function(a, b){
+      var nameA=a.Song, nameB=b.Song
+      if (nameA < nameB) //sort string ascending
+          return -1 
+      if (nameA > nameB)
+          return 1
+      return 0 //default return value (no sorting)
+    })  
     return (
       <div>
         <div>

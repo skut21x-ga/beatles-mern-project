@@ -83,6 +83,15 @@ class Home extends Component {
   render() {
     const gets = this.state.filteredsongs;
     /*  if (this.props.isLoggedIn) { */
+    gets.sort(function (a, b) {
+      var nameA = a.Song,
+        nameB = b.Song;
+      if (nameA < nameB)
+        //sort string ascending
+        return -1;
+      if (nameA > nameB) return 1;
+      return 0; //default return value (no sorting)
+    });
     return (
       <div>
         <div>
