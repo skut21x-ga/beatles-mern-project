@@ -7,7 +7,7 @@ class Banner extends Component {
   render() {
     return (
       <Link to="/">
-        <div>
+        <div className="bannerBox">
           <img src={Logo} alt="" className="logo"></img>
         </div>
       </Link>

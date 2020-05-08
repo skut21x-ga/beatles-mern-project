@@ -62,7 +62,7 @@ class Home extends Component {
   }
 
   filterSongs = (letter) => {
-    console.log(letter, "from the artist");
+    // console.log(letter, "from the artist");
     let filteredSongs = this.state.gets.filter((song) => {
       return song.Song.toLowerCase().charAt(0) === letter.toLowerCase();
     });
@@ -82,7 +82,7 @@ class Home extends Component {
 
   render() {
     const gets = this.state.filteredsongs;
-
+    /*  if (this.props.isLoggedIn) { */
     return (
       <div>
         <div>
@@ -90,7 +90,10 @@ class Home extends Component {
           <br></br>
           <img src={Beatles} alt="" className="beatles"></img>
           <div className="alphabetBox">
-            <Alphabet letterSelector={this.filterSongs} />
+            <Alphabet
+              isLoggedIn={this.state.isLoggedIn}
+              letterSelector={this.filterSongs}
+            />
           </div>{" "}
           <form onSubmit={this.submitHandler}>
             <div className="editSongForm">
@@ -141,7 +144,9 @@ class Home extends Component {
         </div>{" "}
       </div>
     );
-  }
+  } /* else {
+      return <div></div>;
+    }
+  } */
 }
-
 export default Home;

@@ -17,6 +17,15 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.forms {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding-top: 30px;
+}
+
 .alphabetBox {
   display: flex;
   justify-content: center;

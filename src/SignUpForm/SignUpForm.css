@@ -1,8 +1,9 @@
-.signUpForm {
+.headerSignUp {
+  width: 500px;
+  color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
 }
 
 .profile {
@@ -14,17 +15,19 @@
 
 .signUpEmail {
   margin-right: 10px;
-  height: 100px;
+  height: 50px;
   font-size: 16px;
 }
 
 .signUpEmailBox {
   margin-right: 20px;
-  height: 50px;
+  height: 30px;
   padding: 0px;
   font-size: 16px;
   margin: 20px;
+  margin-bottom: 5px;
   width: 300px;
+  margin-top: 5px;
 }
 .signUpSubmit {
   margin-top: 300px;
@@ -33,13 +36,4 @@
   margin: 20px;
   border: 1px solid black;
   height: 30px;
-}
-
-.footer {
-  border-top: solid black thin;
-  padding-top: 20px;
-  background-color: rgb(236, 236, 236);
-  border-top: 1px solid black;
-  box-shadow: 0px 0px 2px 0px;
-  padding-bottom: 10px;
 }

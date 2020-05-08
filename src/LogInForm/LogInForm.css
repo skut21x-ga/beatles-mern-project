@@ -1,0 +1,48 @@
+.LogInForm {
+  width: 500px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile {
+  height: 267px;
+  margin: 5px;
+  font-size: 15px;
+  margin-top: -15px;
+}
+
+.LoginEmail {
+  margin-right: 10px;
+  height: 50px;
+  font-size: 16px;
+}
+
+.LoginEmailBox {
+  margin-right: 20px;
+  height: 30px;
+  padding: 0px;
+  font-size: 16px;
+  margin: 20px;
+  width: 300px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.LoginSubmit {
+  margin-top: 300px;
+  font-size: 14px;
+  padding: 0 20px 0 20px;
+  margin: 20px;
+  border: 1px solid black;
+  height: 30px;
+}
+
+.footer {
+  border-top: solid black thin;
+  padding-top: 20px;
+  background-color: rgb(236, 236, 236);
+  border-top: 1px solid black;
+  box-shadow: 0px 0px 2px 0px;
+  padding-bottom: 10px;
+}

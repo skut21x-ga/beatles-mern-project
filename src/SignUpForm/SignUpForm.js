@@ -6,40 +6,49 @@ import "./SignUpForm.css";
 
 class SignUpForm extends Component {
   render() {
-    return (
-      <div className="footer">
-        <form className="signUpForm">
-          <div>
-            <label htmlFor="email" className="signUpEmail">
-              Email:
-              <input
-                type="text"
-                name="email"
-                className="signUpEmailBox"
-                onChange={this.props.handleInput}
-              />
-            </label>
-          </div>
-          <div>
-            <label htmlFor="password" className="signUpEmailBox">
-              Password:
-              <input
-                type="text"
-                name="password:"
-                className="signUpEmailBox"
-                onChange={this.props.handleInput}
-              />
-            </label>
-          </div>
-          <input
-            value="Sign-In"
-            type="submit"
-            className="signUpSubmit"
-            onClick={this.props.handleSignUp}
-          />
-        </form>
-      </div>
-    );
+    if (this.props.isLoggedIn) {
+      return <div></div>;
+    } else {
+      return (
+        <div className="headerSignUp">
+          {" "}
+          <h4 className="secondTitle">
+            Create Account<br></br>
+          </h4>
+          <form className="signUpForm">
+            {" "}
+            <div>
+              <label htmlFor="email" className="signUpEmail">
+                Email:
+                <input
+                  type="text"
+                  name="email"
+                  className="signUpEmailBox"
+                  onChange={this.props.handleInput}
+                />
+              </label>
+            </div>
+            <div>
+              <label htmlFor="password" className="signUpEmailBox">
+                Password:
+                <input
+                  type="text"
+                  name="password"
+                  className="signUpEmailBox"
+                  onChange={this.props.handleInput}
+                />
+              </label>
+            </div>
+            <input
+              value="Create Account"
+              type="submit"
+              className="signUpSubmit"
+              onClick={this.props.handleSignUp}
+            />
+          </form>
+        </div>
+      );
+    }
   }
 }
 

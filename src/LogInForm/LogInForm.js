@@ -6,31 +6,46 @@ import "./LogInForm.css";
 
 class LogInForm extends Component {
   render() {
-    return (
-      <div>
-        <h2>Log In</h2>
+    if (this.props.isLoggedIn) {
+      return <div></div>;
+    } else {
+      return (
+        <div className="LogInForm">
+          <h4 className="firstTitle">Login</h4>
 
-        <form>
-          <div>
-            <label htmlFor="email">Email</label>
-            <input type="text" name="email" onChange={this.props.handleInput} />
-          </div>
-          <div>
-            <label htmlFor="password">Password</label>
+          <form className="LoginForm">
+            <div>
+              <label htmlFor="email" className="LoginBox">
+                Email
+              </label>
+              <input
+                className="LoginEmailBox"
+                type="text"
+                name="email"
+                onChange={this.props.handleInput}
+              />
+            </div>
+            <div>
+              <label htmlFor="password" className="signUpEmailBox">
+                Password
+              </label>
+              <input
+                className="LoginEmailBox"
+                type="text"
+                name="password"
+                onChange={this.props.handleInput}
+              />
+            </div>
             <input
-              type="text"
-              name="password"
-              onChange={this.props.handleInput}
+              className="LoginSubmit"
+              value="Log-In"
+              type="submit"
+              onClick={this.props.handleLogIn}
             />
-          </div>
-          <input
-            value="Submit"
-            type="submit"
-            onClick={this.props.handleLogIn}
-          />
-        </form>
-      </div>
-    );
+          </form>
+        </div>
+      );
+    }
   }
 }
 

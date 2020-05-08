@@ -2,3 +2,7 @@
   height: 200px;
   background-color: black;
 }
+
+.bannerBox {
+  width: 100vw;
+}
