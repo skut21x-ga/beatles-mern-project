@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: hsl(220, 13%, 18%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,8 +22,9 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  background-color: black;
-  padding-top: 30px;
+  background-color: rgba(0, 0, 0, 0.87);
+  padding-bottom: 30px;
+  padding-top: 10px;
 }
 
 .alphabetBox {

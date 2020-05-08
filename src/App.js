@@ -72,24 +72,24 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="forms">
-          <LogInForm
-            isLoggedIn={this.state.isLoggedIn}
-            handleInput={this.handleInput}
-            handleLogIn={this.handleLogIn}
-          />
-          <SignUpForm
-            isLoggedIn={this.state.isLoggedIn}
-            handleInput={this.handleInput}
-            handleSignUp={this.handleSignUp}
-          ></SignUpForm>{" "}
-        </div>
         <div className="App">
           <div className="BannerBox">
             <Banner></Banner>
           </div>
           <div className="banner">
-            <img src=""></img>
+            <img src=""></img>{" "}
+            <div className="forms">
+              <LogInForm
+                isLoggedIn={this.state.isLoggedIn}
+                handleInput={this.handleInput}
+                handleLogIn={this.handleLogIn}
+              />
+              <SignUpForm
+                isLoggedIn={this.state.isLoggedIn}
+                handleInput={this.handleInput}
+                handleSignUp={this.handleSignUp}
+              ></SignUpForm>{" "}
+            </div>
           </div>
           <Navbar isLoggedIn={this.state.isLoggedIn}></Navbar>
         </div>
