@@ -64,7 +64,6 @@ class App extends Component {
       .then((response) => {
         localStorage.token = response.data.token;
         this.setState({ isLoggedIn: true });
-        alert("User Created");
       })
       .catch((err) => {
         console.log(err);
@@ -98,6 +97,7 @@ class App extends Component {
         </div>
         <main>
           <Route path="/" exact component={Home} />
+          <Route path="/Beatles" />
           <Route path="/JohnLennon" component={JohnLennon} />
           <Route path="/PaulMcCartney" exact component={PaulMcCartney} />
           <Route path="/GeorgeHarrison" exact component={GeorgeHarrison} />
