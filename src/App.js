@@ -45,11 +45,10 @@ class App extends Component {
       .then((response) => {
         localStorage.token = response.data.token;
         this.setState({ isLoggedIn: true });
-        alert("User Logged In");
       })
       .catch((err) => {
         console.log(err);
-        alert("Incorrect Information");
+        alert("Incorrect Information. Please make sure CORS enabled.");
       });
   }
 
@@ -67,8 +66,12 @@ class App extends Component {
         this.setState({ isLoggedIn: true });
         alert("User Created");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        alert("Incorrect Information. Please make sure CORS enabled.");
+      });
   }
+
   render() {
     return (
       <div>
