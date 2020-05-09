@@ -97,7 +97,6 @@ class App extends Component {
         </div>
         <main>
           <Route path="/" exact component={Home} />
-          <Route path="/Beatles" />
           <Route path="/JohnLennon" component={JohnLennon} />
           <Route path="/PaulMcCartney" exact component={PaulMcCartney} />
           <Route path="/GeorgeHarrison" exact component={GeorgeHarrison} />
