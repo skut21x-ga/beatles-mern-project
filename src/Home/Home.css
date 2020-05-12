@@ -32,29 +32,27 @@ span {
   margin-top: 15px;
 }
 
-.trashIcon {
+.Icons {
   display: inline-block;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
   opacity: 0.5;
-  position: absolute;
-  margin-top: -1px;
-  margin-right: 10px;
-}
-
-.trashIcon2 {
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  opacity: 0.5;
-  position: absolute;
-  margin-top: -1px;
-  margin-left: -85px;
+  margin-top: 0px;
   margin-right: 0px;
   padding-right: 20px;
   padding-left: 20px;
   padding: 0px;
-  width: 20px;
+}
+
+.MuiIcon-root {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.songSelector {
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 2px;
 }
 
 .profile {
@@ -124,4 +122,8 @@ span {
   margin-left: 0.5px;
   margin-top: 14px;
   width: 25px;
+}
+
+.SongName-Map {
+  margin: 0;
 }

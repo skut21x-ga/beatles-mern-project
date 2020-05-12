@@ -24,7 +24,7 @@ class Home extends Component {
     };
   }
 
-  clearBox() {
+  clearBox(e) {
     this.setState({
       lyricsbox: "songLyrics-Hidden",
     });
@@ -83,13 +83,14 @@ class Home extends Component {
 
   changeHandles = (e) => {
     this.setState({ song: e.target.value });
-    console.log(this.state);
+    // console.log(this.state);
   };
 
   submitHandler = (e) => {
     e.preventDefault();
     ///const gets = this.state.filteredsongs;
     updateSong(this.state.gets._id, this.state.song);
+    alert("changes saved");
   };
 
   render() {
@@ -134,19 +135,24 @@ class Home extends Component {
               key={gets._id}
               value={gets.Song}
               datavalue={gets.Lyrics}
-              onClick={this.songClick}
+              // onClick={this.songClick}
             >
-              {" "}
-              <div className="trashIcon2">
+              <div
+                className="songSelector"
+                key={gets._id}
+                value={gets.Song}
+                datavalue={gets.Lyrics}
+                onClick={this.songClick}
+              >
+                {gets.Song}
+              </div>
+              <div className="Icons">
                 <Icon
                   color="alert"
                   onClick={() => updateSong(gets._id, this.state.song)}
                 >
                   edit
                 </Icon>
-              </div>
-              {gets.Song}
-              <div className="trashIcon">
                 <Icon onClick={() => deleteSong(gets._id)} color="alert">
                   delete_forever
                 </Icon>
