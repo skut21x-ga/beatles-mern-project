@@ -80,18 +80,6 @@ class App extends Component {
           </div>
           <div className="banner">
             <img src=""></img>{" "}
-            <div className="forms">
-              <LogInForm
-                isLoggedIn={this.state.isLoggedIn}
-                handleInput={this.handleInput}
-                handleLogIn={this.handleLogIn}
-              />
-              <SignUpForm
-                isLoggedIn={this.state.isLoggedIn}
-                handleInput={this.handleInput}
-                handleSignUp={this.handleSignUp}
-              ></SignUpForm>{" "}
-            </div>
           </div>
           <Navbar isLoggedIn={this.state.isLoggedIn}></Navbar>
         </div>
@@ -104,7 +92,19 @@ class App extends Component {
         </main>
         <main className="SubmitRoute">
           <Route path="/Create" exact component={SongForm} />
-        </main>
+        </main>{" "}
+        <div className="forms">
+          <LogInForm
+            isLoggedIn={this.state.isLoggedIn}
+            handleInput={this.handleInput}
+            handleLogIn={this.handleLogIn}
+          />
+          <SignUpForm
+            isLoggedIn={this.state.isLoggedIn}
+            handleInput={this.handleInput}
+            handleSignUp={this.handleSignUp}
+          ></SignUpForm>{" "}
+        </div>
       </div>
     );
   }

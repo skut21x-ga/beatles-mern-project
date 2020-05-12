@@ -24,12 +24,24 @@ class Home extends Component {
     };
   }
 
+  clearBox() {
+    this.setState({
+      lyricsbox: "songLyrics-Hidden",
+    });
+  }
+
   songClick = (e) => {
     this.setState({
       song: e.target.getAttribute("value"),
       lyrics: e.target.getAttribute("datavalue"),
       id: e.target.getAttribute("key"),
       lyricsbox: "songLyrics-View",
+    });
+  };
+
+  songClose = (e) => {
+    this.setState({
+      lyricsbox: "songLyrics-Hidden",
     });
   };
 
@@ -146,16 +158,24 @@ class Home extends Component {
           <br></br>
         </div>
         <div className={this.state.lyricsbox}>
-          <SongInfo
-            value={this.state.song}
-            datavalue={this.state.lyrics}
-          ></SongInfo>
-        </div>{" "}
+          {" "}
+          <div
+            className="modal-scrimm"
+            onClick={() => {
+              this.clearBox(null);
+            }}
+          >
+            <div className="closeButton">
+              <h3 className="closeButtonText">X</h3>
+            </div>
+            <SongInfo
+              value={this.state.song}
+              datavalue={this.state.lyrics}
+            ></SongInfo>
+          </div>
+        </div>
       </div>
     );
-  } /* else {
-      return <div></div>;
-    }
-  } */
+  }
 }
 export default Home;

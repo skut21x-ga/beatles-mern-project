@@ -9,34 +9,24 @@ class SongInfo extends Component {
       value: props.value,
       datavalue: props.datavalue,
     };
-    this.clearBox = this.clearBox.bind(this);
+    // this.clearBox = this.clearBox.bind(this);
   }
-  clearBox() {
-    this.setState({
-      lyricsbox: "songLyrics-Hidden",
-    });
-    console.log(this.state.selectedBox);
-  }
+  // clearBox() {
+  //   this.setState({
+  //     lyricsbox: "songLyrics-Hidden",
+  //   });
+  //   console.log(this.state.selectedBox);
+  // }
   render() {
     return (
       <div className={this.state.lyricsbox}>
-        <div
-          className="modal-scrimm "
-          onClick={() => {
-            this.clearBox(null);
-          }}
-        >
-          <div className="lyricsPage">
-            <div className="closeButton">
-              <h3 className="closeButtonText">CLOSE</h3>
-            </div>
-            <div className="lyricsContainer">
-              <div className="songModal">
-                <div className="textBox">
-                  <div>
-                    <div className="songTitle">{this.props.value}</div>
-                    <div>{this.props.datavalue}</div>
-                  </div>
+        <div className="lyricsPage">
+          <div className="lyricsContainer">
+            <div className="songModal">
+              <div className="textBox">
+                <div>
+                  <div className="songTitle">{this.props.value}</div>
+                  <div>{this.props.datavalue}</div>
                 </div>
               </div>
             </div>
@@ -48,3 +38,8 @@ class SongInfo extends Component {
 }
 
 export default SongInfo;
+
+// need to import SONG CLOSE
+// need to import SONG CLOSE FUNCTION
+// need to import SONG CLOSE
+// need to import SONG CLOSE

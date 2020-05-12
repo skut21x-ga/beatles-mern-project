@@ -90,3 +90,38 @@ span {
   width: 350px;
   text-align: center;
 }
+
+.modal-scrimm {
+  background-color: rgba(0, 0, 0, 0.851);
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.closeButton {
+  padding: 2px;
+  color: black;
+  z-index: 10;
+  background-color: white;
+  line-height: 0.1px;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 50px;
+  border: 2px solid black;
+  box-shadow: 0px 0px 1px 1px black;
+  bottom: 0;
+  position: absolute;
+  top: 0;
+  margin-top: 100px;
+  margin-left: -335px;
+}
+
+.closeButtonText {
+  margin-left: 0.5px;
+  margin-top: 14px;
+  width: 25px;
+}
