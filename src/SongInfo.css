@@ -6,9 +6,16 @@
   padding: 0px;
   border: 2px solid black;
   background-color: rgb(247, 247, 247);
-  margin-top: 20px;
   margin-bottom: 70px;
-  width: 800px;
+  width: 700px;
+}
+
+.songLyrics-Hidden {
+  display: none;
+}
+
+.songLyrics-View {
+  display: flex;
 }
 
 .songLyrics {
@@ -22,6 +29,30 @@
   margin-bottom: 50px;
 }
 
+.closeButton {
+  position: fixed;
+  padding: 2px;
+  color: black;
+  z-index: 10;
+  background-color: white;
+  line-height: 0.1px;
+  width: 25px;
+  height: 25px;
+  border: 2px solid black;
+  box-shadow: 0px 0px 1px 1px black;
+  bottom: 0;
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: center;
+  width: 100px;
+}
+
+.closeButtonText {
+  margin-left: 0.5px;
+  margin-top: 14px;
+  width: 100px;
+}
+
 .songTitle {
   font: 30px;
   font-weight: 900;
@@ -30,8 +61,29 @@
 }
 
 .lyricsContainer {
-  width: 100vw;
+  width: 70vw;
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  margin-top: 40px;
+}
+
+.lyricsPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+}
+
+.modal-scrimm {
+  background-color: rgba(0, 0, 0, 0.851);
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: flex;
   justify-content: center;
 }

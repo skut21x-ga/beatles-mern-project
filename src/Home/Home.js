@@ -34,7 +34,7 @@ class Home extends Component {
   };
 
   valueCheck = () => {
-    if (this.state.lyrics == "") {
+    if (this.state.lyrics === "") {
       console.log("No Lyrics");
     }
   };

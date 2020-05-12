@@ -34,7 +34,7 @@ class GeorgeHarrison extends Component {
   };
 
   valueCheck = () => {
-    if (this.state.lyrics == "") {
+    if (this.state.lyrics === "") {
       console.log("No Lyrics");
     }
   };
@@ -83,15 +83,16 @@ class GeorgeHarrison extends Component {
 
   render() {
     const gets = this.state.filteredsongs;
-    gets.sort(function(a, b){
-      var nameA=a.Song, nameB=b.Song
-      if (nameA < nameB) //sort string ascending
-          return -1 
-      if (nameA > nameB)
-          return 1
-      return 0 //default return value (no sorting)
-    })  
-    
+    gets.sort(function (a, b) {
+      var nameA = a.Song,
+        nameB = b.Song;
+      if (nameA < nameB)
+        //sort string ascending
+        return -1;
+      if (nameA > nameB) return 1;
+      return 0; //default return value (no sorting)
+    });
+
     return (
       <div>
         <div>
