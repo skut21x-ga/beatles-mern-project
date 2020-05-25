@@ -52,7 +52,9 @@ class App extends Component {
       })
       .catch((err) => {
         console.log(err);
-        alert("Incorrect Information. Please make sure CORS enabled.");
+        alert(
+          "Incorrect Information. Please make sure information valid. If issues persist, please enable CORS."
+        );
       });
   }
 
@@ -74,7 +76,9 @@ class App extends Component {
       })
       .catch((err) => {
         console.log(err);
-        alert("Incorrect Information. Please make sure CORS enabled.");
+        alert(
+          "Incorrect Information. Please make sure input is valid. If issues persist, please enable CORS."
+        );
       });
   }
 
