@@ -39,10 +39,13 @@ class App extends Component {
   handleLogIn(e) {
     e.preventDefault();
     axios
-      .post("https://beatles-api.herokuapp.com/users/login/", {
-        email: this.state.email,
-        password: this.state.password,
-      })
+      .post(
+        "https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/users/login/",
+        {
+          email: this.state.email,
+          password: this.state.password,
+        }
+      )
       .then((response) => {
         localStorage.token = response.data.token;
         this.setState({ isLoggedIn: true });
@@ -58,10 +61,13 @@ class App extends Component {
     console.log(this.state.email);
     console.log(this.state.password);
     axios
-      .post("https://beatles-api.herokuapp.com/users/signup", {
-        email: this.state.email,
-        password: this.state.password,
-      })
+      .post(
+        "https://cors-anywhere.herokuapp.com/https://beatles-api.herokuapp.com/users/signup",
+        {
+          email: this.state.email,
+          password: this.state.password,
+        }
+      )
       .then((response) => {
         localStorage.token = response.data.token;
         this.setState({ isLoggedIn: true });
