@@ -16,7 +16,7 @@ class LogInForm extends Component {
           <form className="LoginForm">
             <div>
               <label htmlFor="email" className="LoginBox">
-                Email
+                Email:
               </label>
               <input
                 className="LoginEmailBox"
@@ -26,8 +26,8 @@ class LogInForm extends Component {
               />
             </div>
             <div>
-              <label htmlFor="password" className="signUpEmailBox">
-                Password
+              <label htmlFor="password" className="password signUpEmailBox">
+                Password:
               </label>
               <input
                 className="LoginEmailBox"

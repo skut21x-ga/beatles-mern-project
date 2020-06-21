@@ -43,61 +43,72 @@ export default function SongForm() {
   };
 
   return (
-    <div className="CreateBoxes">
-      <form className={classes.root} noValidate autoComplete="off">
-        <div className="createField">
-          <div className="createInput">
-            <h3 className="createSong">Submit New Lyrics</h3>
-            {/* <TextField
+    <div className="SongSubmitPage">
+      <div className="CreateBoxes">
+        <form className={classes.root} noValidate autoComplete="off">
+          <div className="createField">
+            <div className="createInput">
+              <h3 className="createSong">Submit New Lyrics</h3>
+              {/* <TextField
               className="createTextField1"
               onKeyUp={(event) => updateText(event, "artist")}
               label="Artist"
               variant="outlined"
             /> */}
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={artist}
-              onChange={handleSelect}
-              displayEmpty
-            >
-              HELLO
-              <MenuItem value={""}>
-                <em>Click to select an artist</em>
-              </MenuItem>
-              <MenuItem value={"The Beatles"}>The Beatles</MenuItem>
-              <MenuItem value={"John Lennon"}>John Lennon</MenuItem>
-              <MenuItem value={"Paul McCartney"}>Paul McCartney</MenuItem>
-              <MenuItem value={"George Harrison"}>George Harrison</MenuItem>
-              <MenuItem value={"Ringo Starr"}>Ringo Starr</MenuItem>
-            </Select>
-          </div>{" "}
-          <div className="createInput">
-            <TextField
-              className="createTextField2"
-              label="Song"
-              variant="outlined"
-              onKeyUp={(event) => updateText(event, "song")}
-            />
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={artist}
+                onChange={handleSelect}
+                displayEmpty
+              >
+                HELLO
+                <MenuItem value={""}>
+                  <em>Click to select an artist</em>
+                </MenuItem>
+                <MenuItem value={"The Beatles"}>The Beatles</MenuItem>
+                <MenuItem value={"John Lennon"}>John Lennon</MenuItem>
+                <MenuItem value={"Paul McCartney"}>Paul McCartney</MenuItem>
+                <MenuItem value={"George Harrison"}>George Harrison</MenuItem>
+                <MenuItem value={"Ringo Starr"}>Ringo Starr</MenuItem>
+              </Select>
+            </div>{" "}
+            <div className="createInput">
+              <TextField
+                className="createTextField2"
+                label="Song"
+                variant="outlined"
+                onKeyUp={(event) => updateText(event, "song")}
+              />
+            </div>
+            <div className="createInput">
+              <TextField
+                className="createTextField3"
+                label="Lyrics"
+                variant="outlined"
+                onKeyUp={(event) => updateText(event, "lyrics")}
+              />
+            </div>
           </div>
-          <div className="createInput">
-            <TextField
-              className="createTextField3"
-              label="Lyrics"
-              variant="outlined"
-              onKeyUp={(event) => updateText(event, "lyrics")}
-            />
+          <Button
+            onClick={newSong}
+            className="submitButton"
+            variant="contained"
+            color="primary"
+          >
+            Submit
+          </Button>
+        </form>
+      </div>
+      <div className="SmallBoxes">
+        <div className="increaseRes">
+          <div className="increaseRes">
+            <h3 className="increaseRes">
+              Increase screen resolution to submit new lyrics
+            </h3>
           </div>
         </div>
-        <Button
-          onClick={newSong}
-          className="submitButton"
-          variant="contained"
-          color="primary"
-        >
-          Submit
-        </Button>
-      </form>
+      </div>
     </div>
   );
 }

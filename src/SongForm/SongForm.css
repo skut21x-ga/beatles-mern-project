@@ -10,6 +10,31 @@
   height: 400px;
 }
 
+.SongSubmitPage {
+  background-color: black;
+}
+
+.SmallBoxes {
+  display: none;
+  margin-top: 50px;
+  margin-bottom: 90px;
+  justify-content: center;
+  flex-flow: row;
+  padding: 0px 50px;
+  border: 0.5px solid black;
+  background-color: rgba(243, 243, 243, 0.911);
+  height: 85px;
+  width: 70vw;
+}
+
+.increaseRes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  width: 100%;
+}
 .createInput {
   width: 500px;
   padding: 10px;
@@ -48,4 +73,26 @@
 
 .MuiInputBase-root.MuiInput-root.MuiInput-underline {
   width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .CreateBoxes {
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .CreateBoxes {
+    height: 285px;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  .CreateBoxes {
+    display: none;
+  }
+
+  .SmallBoxes {
+    display: inline-block;
+  }
 }

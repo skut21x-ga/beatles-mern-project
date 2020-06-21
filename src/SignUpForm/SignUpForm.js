@@ -30,11 +30,11 @@ class SignUpForm extends Component {
             </div>
             <div>
               <label htmlFor="password" className="signUpEmailBox">
-                Password:
+                <a className="password-text">Password:</a>
                 <input
                   type="text"
                   name="password"
-                  className="signUpEmailBox"
+                  className="signUpEmailBox passwordform"
                   onChange={this.props.handleInput}
                 />
               </label>

@@ -1,11 +1,15 @@
 span {
   margin: auto 30px;
 }
-
 .profile {
-  height: 270px;
   margin: 5px;
   margin-top: -15px;
+  width: 79.8%;
+  max-width: 800px;
+  max-height: 266px;
+  border: 1px solid black;
+  height: auto;
+  object-fit: cover;
 }
 
 .songName {
@@ -69,4 +73,19 @@ span {
   width: 350px;
 
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .songSelector {
+    font-size: 15px;
+  }
+
+  .songName {
+    font-size: 15px;
+  }
+
+  .trashIcon2,
+  .trashIcon {
+    display: none !important;
+  }
 }

@@ -1,8 +1,11 @@
 .logo {
   height: 200px;
   background-color: black;
+  width: 50%;
+  height: 50%;
 }
 
 .bannerBox {
   width: 100vw;
+  background-color: black;
 }

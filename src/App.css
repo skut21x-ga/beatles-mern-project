@@ -45,3 +45,61 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+@media only screen and (max-width: 1000px) {
+  .forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+  }
+  .navBar,
+  MuiPaper-root,
+  MuiPaper-elevation1,
+  MuiPaper-rounded,
+  .tabContainerBox {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .textBox {
+    width: 80vw !important;
+    padding: 10px;
+    font-size: 12px;
+    height: 100%;
+    line-height: 12px !important;
+    word-wrap: normal;
+    margin-top: -25px;
+  }
+
+  .songSelector {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .alphabetBox {
+    display: none;
+  }
+
+  .editSongForm {
+    display: none !important;
+  }
+
+  .Icons {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .LogInForm {
+    display: none !important  ;
+  }
+
+  .headerSignUp {
+    display: none !important;
+  }
+}

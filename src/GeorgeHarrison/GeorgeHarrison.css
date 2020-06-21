@@ -3,9 +3,14 @@ span {
 }
 
 .profile {
-  height: 270px;
+  height: 267px;
   margin: 5px;
   margin-top: -15px;
+  width: 79.8%;
+  height: 79.8%;
+  max-width: 800px;
+  max-height: 266px;
+  border: 1px solid black;
 }
 
 .songName {
@@ -38,9 +43,14 @@ span {
 }
 
 .profile {
-  height: 300px;
   margin: 5px;
   margin-top: -15px;
+  width: 79.8%;
+  max-width: 800px;
+  max-height: 266px;
+  border: 1px solid black;
+  height: auto;
+  object-fit: cover;
 }
 
 .songLyrics-View {
@@ -70,4 +80,19 @@ span {
   width: 350px;
 
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .songSelector {
+    font-size: 15px;
+  }
+
+  .songName {
+    font-size: 15px;
+  }
+
+  .trashIcon2,
+  .trashIcon {
+    display: none !important;
+  }
 }
