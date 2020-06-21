@@ -171,9 +171,6 @@ class Home extends Component {
               this.clearBox(null);
             }}
           >
-            <div className="closeButton">
-              <h3 className="closeButtonText">X</h3>
-            </div>
             <SongInfo
               value={this.state.song}
               datavalue={this.state.lyrics}

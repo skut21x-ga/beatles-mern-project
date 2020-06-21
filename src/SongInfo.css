@@ -27,6 +27,9 @@
   width: 500px;
   line-height: 28px;
   margin-bottom: 50px;
+  font-size: 12.5px;
+  line-height: 18px;
+  height: 100%;
 }
 
 .songTitle {
